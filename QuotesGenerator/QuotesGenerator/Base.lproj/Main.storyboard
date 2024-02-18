@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuotesGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="명언 생성기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meg-FJ-xY7">
+                                <rect key="frame" x="24" y="83" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsU-XV-7Nh">
+                                <rect key="frame" x="24" y="128" width="345" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-lc-yQP" userLabel="Quote Label">
+                                        <rect key="frame" x="20" y="20" width="305" height="140"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ik-Jw-vED" userLabel="Name Label">
+                                        <rect key="frame" x="20" y="180" width="305" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.74901960784313726" green="0.80784313725490198" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Ik-Jw-vED" secondAttribute="trailing" constant="20" id="AL7-u1-JkG"/>
+                                    <constraint firstItem="pGa-lc-yQP" firstAttribute="leading" secondItem="vsU-XV-7Nh" secondAttribute="leading" constant="20" id="QzQ-f1-GUR"/>
+                                    <constraint firstAttribute="height" constant="200" id="Wne-Qp-YZC"/>
+                                    <constraint firstItem="pGa-lc-yQP" firstAttribute="top" secondItem="vsU-XV-7Nh" secondAttribute="top" constant="20" id="WvR-Hp-1pE"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Ik-Jw-vED" secondAttribute="bottom" constant="20" id="Ye4-bf-qMY"/>
+                                    <constraint firstItem="4Ik-Jw-vED" firstAttribute="leading" secondItem="vsU-XV-7Nh" secondAttribute="leading" constant="20" id="heH-a2-fsf"/>
+                                    <constraint firstItem="4Ik-Jw-vED" firstAttribute="top" secondItem="pGa-lc-yQP" secondAttribute="bottom" constant="20" id="mhe-En-tPl"/>
+                                    <constraint firstAttribute="trailing" secondItem="pGa-lc-yQP" secondAttribute="trailing" constant="20" id="yOX-qC-djT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFb-2T-zJ3">
+                                <rect key="frame" x="153" y="348" width="87" height="34.333333333333314"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="명언 생성">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapQuoteGeneratorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d3K-K9-gVq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="meg-FJ-xY7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="4Ak-5t-d4n"/>
+                            <constraint firstItem="TFb-2T-zJ3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6xO-qO-mvc"/>
+                            <constraint firstItem="TFb-2T-zJ3" firstAttribute="top" secondItem="vsU-XV-7Nh" secondAttribute="bottom" constant="20" id="87l-sz-aAr"/>
+                            <constraint firstItem="meg-FJ-xY7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="8k7-fg-Yhf"/>
+                            <constraint firstItem="vsU-XV-7Nh" firstAttribute="top" secondItem="meg-FJ-xY7" secondAttribute="bottom" constant="24" id="lCP-4L-MFH"/>
+                            <constraint firstItem="vsU-XV-7Nh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="sMk-ho-7JJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="meg-FJ-xY7" secondAttribute="trailing" constant="24" id="v9M-op-TRp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vsU-XV-7Nh" secondAttribute="trailing" constant="24" id="xEc-EE-8c4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="4Ik-Jw-vED" id="pIv-ok-Nsh"/>
+                        <outlet property="quoteLabel" destination="pGa-lc-yQP" id="hGs-cN-Lz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
