@@ -40,12 +40,12 @@
   - 사이드 인스펙트 메뉴에서 설정
   - 우선순위는 1~1000 까지의 값 (1000: required, 750: high, 500: medium, 250: low)
   - **content hugging**과 **content compression resistance**로 구성
+    <img width="687" alt="images_wansook0316_post_82c131b4-003e-4508-a210-4f0065bc879b_Screen Shot 2022-03-29 at 9 32 30 AM" src="https://github.com/mijisuh/mijisuh/assets/57468832/e50fb93b-6895-4e34-b05b-26f31cca8d33">
 
 - <u>늘어나는 경우에 저항</u>하는 제약(최대 크기에 대한 제한)은 **content hugging**(우선순위가 높으면 자신의 크기 유지, 우선순위가 낮으면 크기가 늘어남)
 
 - <u>줄어드는 경우에 저항</u>하는 제약(최소 크기에 대한 제한)은 **content compression resistance**(우선순위가 높으면 자신의 크기 유지, 우선순위가 낮으면 크기가 줄어듬)
 
-<img width="687" alt="images_wansook0316_post_82c131b4-003e-4508-a210-4f0065bc879b_Screen Shot 2022-03-29 at 9 32 30 AM" src="https://github.com/mijisuh/mijisuh/assets/57468832/e50fb93b-6895-4e34-b05b-26f31cca8d33">
 </details>
 
 
@@ -58,18 +58,20 @@
 
 ## 구현 내용
 1. UILabel, UIView 생성
-    - UIView 내부의 2개의 UILabel 생성
-    - 각각 명언 라벨과 이름 라벨로 지칭
-    - UILabel의 property 중 Lines를 0으로 설정하면 여러 줄을 보여줄 수 있음
-2. AutoLayout 적용
-    - 명언 라벨의 top, leading, trailing을 20으로 설정
-    - 이름 라벨의 bottom, leading, trailing을 20으로 설정
-    - 명언 라벨을 이름 라벨보다 크기를 키워야 하기 때문에 명언 라벨의 content hugging priority를 이름 라벨보다 낮게 만들어야 함(명언 라벨이 이름 라벨보다 커짐)
-    <img width="1133" alt="스크린샷 2024-02-18 오후 3 15 44" src="https://github.com/mijisuh/mijisuh/assets/57468832/41c8c4dc-0e62-4ffa-aa18-4b2076566e4f">
+  - UIView 내부의 2개의 UILabel 생성
+  - 각각 명언 라벨과 이름 라벨로 지칭
+  - UILabel의 property 중 Lines를 0으로 설정하면 여러 줄을 보여줄 수 있음
 
-    - 명언 라벨에서 매우 긴 문장을 보여주는 경우 문자열을 표현할 공간이 부족해짐 → 이름 라벨의 content compression resistance priorty를 명언 라벨보다 낮게 만들어야 함(명언 라벨의 크기가 아무리 커져도 이름 라벨의 크기가 유지)
+2. AutoLayout 적용
+  - 명언 라벨의 top, leading, trailing을 20으로 설정
+  - 이름 라벨의 bottom, leading, trailing을 20으로 설정
+  - 명언 라벨을 이름 라벨보다 크기를 키워야 하기 때문에 명언 라벨의 content hugging priority를 이름 라벨보다 낮게 만들어야 함(명언 라벨이 이름 라벨보다 커짐)
+    <img width="1133" alt="스크린샷 2024-02-18 오후 3 15 44" src="https://github.com/mijisuh/mijisuh/assets/57468832/41c8c4dc-0e62-4ffa-aa18-4b2076566e4f">
+  - 명언 라벨에서 매우 긴 문장을 보여주는 경우 문자열을 표현할 공간이 부족해짐 → 이름 라벨의 content compression resistance priorty를 명언 라벨보다 낮게 만들어야 함(명언 라벨의 크기가 아무리 커져도 이름 라벨의 크기가 유지)
     <img width="1133" alt="스크린샷 2024-02-18 오후 3 24 34" src="https://github.com/mijisuh/mijisuh/assets/57468832/cb514e75-5d4b-4e13-99cf-9121b1819497">
+    
 3. IBOutlet 변수 연결, IBAction 함수 정의
+   
 4. 명언 정보를 나타내는 구조체 정의
 
 
