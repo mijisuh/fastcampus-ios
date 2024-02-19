@@ -4,5 +4,6 @@
 ### Basic
 | 프로젝트 | 구현 방식 |
 | --- | --- |
-| [명언 생성기](https://github.com/mijisuh/fastcampus-ios/tree/main/QuotesGenerator) | UIKit, Storyboad, AutoLayout |
+| [명언 생성기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/QuotesGenerator) | UIKit, Storyboad, AutoLayout |
+| [LED 전광판 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/LEDBoard) | UIKit, Storyboard, AutoLayout |
 
