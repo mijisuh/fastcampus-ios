@@ -6,4 +6,5 @@
 | --- | --- |
 | [명언 생성기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/QuotesGenerator) | UIKit, Storyboard, AutoLayout |
 | [LED 전광판 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/LEDBoard) | UIKit, Storyboard, AutoLayout |
+| [계산기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Calculator) | UIKit, Storyboard, AutoLayout |
 
