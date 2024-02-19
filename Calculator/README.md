@@ -41,42 +41,42 @@
 
 ## 구현 내용
 1. 계산 결과를 보여줄 라벨과 키패드 부분을 보여줄 스택 뷰로 구성
-    - 키패드의 버튼들을 모두 스택 뷰로 설정
-    - 각 줄은 Horizontal, 전체를 Vertical 스택 뷰로 구성
+  - 키패드의 버튼들을 모두 스택 뷰로 설정
+  - 각 줄은 Horizontal, 전체를 Vertical 스택 뷰로 구성
 2. 스택 뷰의 제약 조건 설정 및 속성 설정
-    - **Vertical 스택 뷰의 Bottom Space의 priority를 1000에서 750으로 변경**
-        - 버튼을 비율로 설정하기 때문에 화면의 해상도가 커질수록 버튼의 크기도 커질 수 있음
-        - <u>Bottom Space를 낮게 설정해</u> Vertical 스택 뷰의 상황에 따라 <u>Bottom Space가 가변적인 사이즈를 갖도록 함</u>
-        - <u>Vertical 스택 뷰의 사이즈를 화면에 맞게 먼저 구성</u>하고 Bottom Space의 간격을 맞추겠다는 뜻
-    - Vertical 스택 뷰의 Alignment를 `Fill`로 변경해서 좌우 공간을 꽉 채움
-    - 내부의 Horizontal 스택 뷰들의 Distribution 속성을 `Equal Spacing`으로 변경해서 스택 뷰 사이 간격을 균등하게 맞춤
-    - Aspect Ratio 제약 조건을 설정하여 뷰의 가로 세로 비율을 고정(Multiplier를 1로 설정 시 정사각 비율)
-    - 첫 번째 줄의 AC 버튼의 크기를 숫자 패드 3개를 합친 크기와 동일하게 해주기 위해서 AC 버튼을 마우스 오른쪽 버튼으로 클릭한 후 두번째 숫자 버튼의 3번째 버튼에 드래그하고 trailing 선택
+  - **Vertical 스택 뷰의 Bottom Space의 priority를 1000에서 750으로 변경**
+    - 버튼을 비율로 설정하기 때문에 화면의 해상도가 커질수록 버튼의 크기도 커질 수 있음
+    - <u>Bottom Space를 낮게 설정해</u> Vertical 스택 뷰의 상황에 따라 <u>Bottom Space가 가변적인 사이즈를 갖도록 함</u>
+    - <u>Vertical 스택 뷰의 사이즈를 화면에 맞게 먼저 구성</u>하고 Bottom Space의 간격을 맞추겠다는 뜻
+  - Vertical 스택 뷰의 Alignment를 `Fill`로 변경해서 좌우 공간을 꽉 채움
+  - 내부의 Horizontal 스택 뷰들의 Distribution 속성을 `Equal Spacing`으로 변경해서 스택 뷰 사이 간격을 균등하게 맞춤
+  - Aspect Ratio 제약 조건을 설정하여 뷰의 가로 세로 비율을 고정(Multiplier를 1로 설정 시 정사각 비율)
+  - 첫 번째 줄의 AC 버튼의 크기를 숫자 패드 3개를 합친 크기와 동일하게 해주기 위해서 AC 버튼을 마우스 오른쪽 버튼으로 클릭한 후 두번째 숫자 버튼의 3번째 버튼에 드래그하고 trailing 선택
 3. 버튼의 색상 변경 및 Radius 조정
-    - `@IBInspectable`, `@IBDesignables` 어노테이션을 이용
-    - RoundButton이라는 `UIButton` 클래스 생성
+  - `@IBInspectable`, `@IBDesignables` 어노테이션을 이용
+  - RoundButton이라는 `UIButton` 클래스 생성
         
-        ```swift
-        @IBDesignable // 변경사항을 스토리보드에서 실시간으로 확인 가능
-        class RoundButton: UIButton {
-            @IBInspectable var isRound: Bool = false { // 스토리보드에서 isRound 값 변경 가능
-                didSet {
-                    if isRound {
-                        self.layer.cornerRadius = self.frame.height / 2 // 정사각형 버튼 -> 원 / 아니면 테두리가 둥글어짐
-                    }
-                }
-            }
-        }
-        ```
+      ```swift
+      @IBDesignable // 변경사항을 스토리보드에서 실시간으로 확인 가능
+      class RoundButton: UIButton {
+          @IBInspectable var isRound: Bool = false { // 스토리보드에서 isRound 값 변경 가능
+              didSet {
+                  if isRound {
+                      self.layer.cornerRadius = self.frame.height / 2 // 정사각형 버튼 -> 원 / 아니면 테두리가 둥글어짐
+                  }
+              }
+          }
+      }
+      ```
         
-    - 스토리보드에서 모든 버튼을 RoundButton으로 변경
-    - 속성 인스펙션에서 Is Round 항목 추가됨 → On 으로 변경 시 스토리보드 상에서 변경된 것을 확인
+  - 스토리보드에서 모든 버튼을 RoundButton으로 변경
+  - 속성 인스펙션에서 Is Round 항목 추가됨 → On 으로 변경 시 스토리보드 상에서 변경된 것을 확인
 4. 계산기 기능 구현
-    - 아울렛 변수, 액션 함수 정의
-        - 결과 값을 보여주는 라벨을 아울렛 변수로 정의
-        - 숫자 버튼은 하나의 액션 함수에 연결
-        - 초기화, 연산 버튼들도 액션 함수 정의
-    - Enum 정의
-        - Operation 이라는 열거형을 정의해 연산자 정보를 저장할 수 있도록 함
+  - 아울렛 변수, 액션 함수 정의
+      - 결과 값을 보여주는 라벨을 아울렛 변수로 정의
+      - 숫자 버튼은 하나의 액션 함수에 연결
+      - 초기화, 연산 버튼들도 액션 함수 정의
+  - Enum 정의
+      - Operation 이라는 열거형을 정의해 연산자 정보를 저장할 수 있도록 함
 
 
