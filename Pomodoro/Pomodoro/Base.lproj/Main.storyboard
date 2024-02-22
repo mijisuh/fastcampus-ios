@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,43 +12,56 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pomodoro" translatesAutoresizingMaskIntoConstraints="NO" id="x5A-Ig-7BX">
-                                <rect key="frame" x="146.66666666666666" y="83" width="100" height="100"/>
+                                <rect key="frame" x="137.66666666666666" y="74" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="1De-Ir-FvE"/>
                                     <constraint firstAttribute="height" constant="100" id="Ziu-En-C3Y"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-tg-4bP">
-                                <rect key="frame" x="24" y="263" width="345" height="60"/>
+                                <rect key="frame" x="24" y="254" width="327" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" alpha="0.0" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="8il-v8-KlH">
-                                <rect key="frame" x="48" y="353" width="297" height="4"/>
+                                <rect key="frame" x="48" y="344" width="279" height="4"/>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smX-RN-aii">
-                                <rect key="frame" x="0.0" y="213" width="393" height="216"/>
+                                <rect key="frame" x="0.0" y="204" width="375" height="216"/>
                             </datePicker>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="qB6-Ib-1Iu">
-                                <rect key="frame" x="24" y="453" width="345" height="34.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qB6-Ib-1Iu">
+                                <rect key="frame" x="75.666666666666686" y="444" width="224" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFm-50-w7C">
-                                        <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Sf9-NY-ck0"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="취소">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="tapCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fF6-2B-xnP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPU-Vg-uWc">
-                                        <rect key="frame" x="212.66666666666663" y="0.0" width="132.33333333333337" height="34.333333333333336"/>
+                                        <rect key="frame" x="124" y="0.0" width="100" height="34.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="GGZ-Kn-NPm"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="시작">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="tabToggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HnK-oT-P8y"/>
                                         </connections>
@@ -64,14 +77,13 @@
                             <constraint firstItem="x5A-Ig-7BX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3u7-TM-77s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z2B-tg-4bP" secondAttribute="trailing" constant="24" id="4cC-G2-4UH"/>
                             <constraint firstItem="smX-RN-aii" firstAttribute="top" secondItem="x5A-Ig-7BX" secondAttribute="bottom" constant="30" id="7Pp-9a-MZ8"/>
-                            <constraint firstItem="smX-RN-aii" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BXq-wR-hMl"/>
+                            <constraint firstItem="smX-RN-aii" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8AE-np-UU7"/>
                             <constraint firstItem="8il-v8-KlH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="K1L-tr-nMK"/>
-                            <constraint firstItem="qB6-Ib-1Iu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Svx-U4-11k"/>
+                            <constraint firstItem="qB6-Ib-1Iu" firstAttribute="top" secondItem="smX-RN-aii" secondAttribute="bottom" constant="24" id="SUp-k6-2A2"/>
                             <constraint firstItem="z2B-tg-4bP" firstAttribute="top" secondItem="x5A-Ig-7BX" secondAttribute="bottom" constant="80" id="U3B-0c-m86"/>
                             <constraint firstItem="z2B-tg-4bP" firstAttribute="centerX" secondItem="x5A-Ig-7BX" secondAttribute="centerX" id="UnV-WD-13d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qB6-Ib-1Iu" secondAttribute="trailing" constant="24" id="ZTv-Ji-OTE"/>
                             <constraint firstAttribute="trailing" secondItem="smX-RN-aii" secondAttribute="trailing" id="dr7-d4-6sY"/>
-                            <constraint firstItem="qB6-Ib-1Iu" firstAttribute="top" secondItem="smX-RN-aii" secondAttribute="bottom" constant="24" id="jhX-fm-SlG"/>
+                            <constraint firstItem="qB6-Ib-1Iu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kBy-n6-AaV"/>
                             <constraint firstItem="x5A-Ig-7BX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="n97-Sn-7Mh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8il-v8-KlH" secondAttribute="trailing" constant="48" id="reg-MS-lbz"/>
                         </constraints>
