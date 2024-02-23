@@ -10,3 +10,4 @@
 | [To-Do List 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/TodoList) | UIKit, Storyboard, AutoLayout | UITableView, UIAlertController, UserDefaults |
 | [일기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Diary) | UIKit, Storyboard, AutoLayout | UITabBarController, UICollectionView, NotificationCenter |
 | [뽀모도로 타이머 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Pomodoro) | UIKit, Storyboard, AutoLayout | DispatchSourceTimer, UIView Animation |
+| [일기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Weather) | UIKit, Storyboard, AutoLayout | URLSession, Codable, OpenWeatherAPI |
