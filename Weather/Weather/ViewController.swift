@@ -44,10 +44,11 @@ class ViewController: UIViewController {
     }
     
     func getCurrentWeather(cityName: String) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=a853ba1f86e00f42fe254fa5b87956f6") else { return }
+        guard let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(apiKey)") else { return }
         // 1. 세션 생성
         let session = URLSession(configuration: .default)
-        // 2. 서버에 요청
+        // 2. 서버에 요청d
         session.dataTask(with: url) { [weak self] data, response, error in
             // data: 서버에서 응답 받은 데이터
             // response: http 헤더 및 상태 코드와 같은 응답 메타데이터
