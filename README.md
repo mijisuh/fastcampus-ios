@@ -3,7 +3,7 @@
 
 ### Basic
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
-| ---- | --- | --- |
+| --- | --- | --- |
 | [명언 생성기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/QuotesGenerator) | UIKit, Storyboard, AutoLayout | UIKit, Storyboard, AutoLayout
 | [LED 전광판 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/LEDBoard) | UIKit, Storyboard, AutoLayout | UINavigationController, UIViewController Life Cycle, 화면 전환 개념, 화면 간 데이터 전달, Asset Catalog
 | [계산기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Calculator) | UIKit, Storyboard, AutoLayout | UIStackView, IBDesignables, IBInspectable |
@@ -12,3 +12,8 @@
 | [뽀모도로 타이머 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Pomodoro) | UIKit, Storyboard, AutoLayout | DispatchSourceTimer, UIView Animation |
 | [일기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Weather) | UIKit, Storyboard, AutoLayout | URLSession, Codable, OpenWeatherAPI |
 | [코로나 현황판 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/COVID19) | UIKit, Storyboard, AutoLayout | Alamofire, CocoaPods, Corona-19-API |
+
+### Intermediate
+| 프로젝트 | 구현 방식 | 주요 활용 기술 |
+| --- | --- | --- |
+| [Spotify 스타일 로그인 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SpotifyStyleLoginSampleApp) | UIKit, Storyboard, AutoLayout | Firebase Authentication |
