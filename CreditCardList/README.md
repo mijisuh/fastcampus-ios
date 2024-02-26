@@ -162,144 +162,144 @@
                 }
             }
             ```
-    1. 카드 리스트의 선택 여부를 데이터베이스에 저장
-        - `didSelectRowAt` 에 업데이트 코드 작성 - **레퍼런스에 경로를 알려줘야 함**
-            - 경로를 알고 있을 때
-                ```swift
-                let cardID = self.creditCardList[indexPath.row].id
-                self.ref.child("Item\(cardID)/isSelected").setValue(true)
-                ```
-            - 키 값이 임의의 값으로 생성되어 알 수 없는 경우에는 **객체가 가지고 있는 고유의 값(Id)을 검색해서 객체의 경로를 알 수도 있음**
-                ```swift
-                self.ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [weak self] snapshot in // cardID와 값이 같으면 가져옴
-                    guard let self = self,
-                          let value = snapshot.value as? [String: [String: Any]],
-                          let key = value.keys.first
-                    else { return }
-                    self.ref.child("\(key)/isSelected").setValue(true)
-                }
-                ```
-        - 셀 선택시 실시간으로 Realtime Database에 값이 변경되는 것을 확인
-    2. 카드 리스트에서 카드 데이터 삭제
-        - 테이블 뷰 델리게이트 `commit` 메서드 정의 → 스와이프해서 해당 셀 삭제 가능
-        - nil 값을 쓴다는 점에서 쓰기와 동일 - `self.ref.child("\(key)/isSelected").setValue(nil)`
-        - 삭제를 위한 `removeValue` 함수 사용 가능
+8. 카드 리스트의 선택 여부를 데이터베이스에 저장
+    - `didSelectRowAt` 에 업데이트 코드 작성 - **레퍼런스에 경로를 알려줘야 함**
+        - 경로를 알고 있을 때
             ```swift
-            override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-                return true
-            }
-            
-            override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-                if editingStyle == .delete {
-                    // Option 1 - 키 이름을 알고 있는 경우
-                    let cardId = self.creditCardList[indexPath.row].id
-                    self.ref.child("Item\(cardId)").removeValue()
-                    
-                    // Option 2 - 키 이름을 모르는 경우
-                    self.ref.queryOrdered(byChild: "id").queryEqual(toValue: cardId).observe(.value) { [weak self] snapshot in
-                        guard let self = self,
-                              let value = snapshot.value as? [String: [String: Any]],
-                              let key = value.keys.first // snapshot의 value는 배열로 전달되는데 id는 고유한 하나의 값만 가지므로
-                        else { return }
-                        
-                        self.ref.child(key).removeValue()
-                    }
-                }
+            let cardID = self.creditCardList[indexPath.row].id
+            self.ref.child("Item\(cardID)/isSelected").setValue(true)
+            ```
+        - 키 값이 임의의 값으로 생성되어 알 수 없는 경우에는 **객체가 가지고 있는 고유의 값(Id)을 검색해서 객체의 경로를 알 수도 있음**
+            ```swift
+            self.ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [weak self] snapshot in // cardID와 값이 같으면 가져옴
+                guard let self = self,
+                        let value = snapshot.value as? [String: [String: Any]],
+                        let key = value.keys.first
+                else { return }
+                self.ref.child("\(key)/isSelected").setValue(true)
             }
             ```
-    3. Firestore 생성 후 연결
-        - 파이어베이스 콘솔에서 데이터베이스 생성
-        - 코코아팟 설치 - `pod 'Firebase/Firestore'`, `pod 'FirebaseFirestoreSwift'`
-        - 데이터 추가
-            - Realtime Database처럼 JSON 가져오기를 지원하지 않음
-            - 코드로 읽기 작업들을 Batch에 넣고 해당 Batch를 커밋하는 방식 사용 → Swift로 작성된 더미 데이터를 AppDelegate에서 데이터를 읽어오는 초기화 작업 최초 1회 실행
-                ```swift
-                import FirebaseFirestore
+    - 셀 선택시 실시간으로 Realtime Database에 값이 변경되는 것을 확인
+2. 카드 리스트에서 카드 데이터 삭제
+    - 테이블 뷰 델리게이트 `commit` 메서드 정의 → 스와이프해서 해당 셀 삭제 가능
+    - nil 값을 쓴다는 점에서 쓰기와 동일 - `self.ref.child("\(key)/isSelected").setValue(nil)`
+    - 삭제를 위한 `removeValue` 함수 사용 가능
+        ```swift
+        override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            return true
+        }
+        
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                // Option 1 - 키 이름을 알고 있는 경우
+                let cardId = self.creditCardList[indexPath.row].id
+                self.ref.child("Item\(cardId)").removeValue()
                 
-                let db = Firestore.firestore() // 파이어스토어 db 선언
-                  
-                db.collection("creditCardList").getDocuments { snapshot, _ in // "creditCardList" 컬렉션 생성
-                    guard snapshot?.isEmpty == true else { return } // 스냅샷이 비어있을 경우(db에 아무것도 없는 경우)에만 실행
+                // Option 2 - 키 이름을 모르는 경우
+                self.ref.queryOrdered(byChild: "id").queryEqual(toValue: cardId).observe(.value) { [weak self] snapshot in
+                    guard let self = self,
+                            let value = snapshot.value as? [String: [String: Any]],
+                            let key = value.keys.first // snapshot의 value는 배열로 전달되는데 id는 고유한 하나의 값만 가지므로
+                    else { return }
                     
-                    let batch = db.batch()
-                    let card0Ref = db.collection("creditCardList").document("card0")
-                    let card1Ref = db.collection("creditCardList").document("card1")
-                    ...
-                
-                    do {
-                        try batch.setData(from: CreditCardDummy.card0, forDocument: card0Ref) // 경로를 지정해 데이터 쓰기
-                        try batch.setData(from: CreditCardDummy.card1, forDocument: card1Ref)
-                        ...
-                    } catch let error {
-                        print("ERROR writing card to Firestore \(error.localizedDescription)")
-                    }
-                    
-                    batch.commit() // 반드시 커밋을 해줘야 업데이트에 반영이 됨
+                    self.ref.child(key).removeValue()
                 }
-                ```
-        - 데이터 읽기
+            }
+        }
+        ```
+3. Firestore 생성 후 연결
+    - 파이어베이스 콘솔에서 데이터베이스 생성
+    - 코코아팟 설치 - `pod 'Firebase/Firestore'`, `pod 'FirebaseFirestoreSwift'`
+    - 데이터 추가
+        - Realtime Database처럼 JSON 가져오기를 지원하지 않음
+        - 코드로 읽기 작업들을 Batch에 넣고 해당 Batch를 커밋하는 방식 사용 → Swift로 작성된 더미 데이터를 AppDelegate에서 데이터를 읽어오는 초기화 작업 최초 1회 실행
             ```swift
             import FirebaseFirestore
             
-            var db = Firestore.firestore()
-            
-            // Firestore 읽기
-            db.collection("creditCardList").addSnapshotListener { snapshot, error in // creditCardList라는 document를 바라보게 함
-                guard let documents = snapshot?.documents else { // snapshot에 해당 document가 있을 경우에만 실행
-                    print("ERROR Firestore fetching document \(String(describing: error))")
-                    return
-              }
+            let db = Firestore.firestore() // 파이어스토어 db 선언
                 
-                self.creditCardList = documents.compactMap { doc -> CreditCard? in
-                    do {
-                        let jsonData = try JSONSerialization.data(withJSONObject: doc.data())
-                        let creditCard = try JSONDecoder().decode(CreditCard.self, from: jsonData)
-                        return creditCard
-                    } catch let error {
-                        print("ERROR JSON Pasring \(error.localizedDescription)")
-                        return nil
-                    }
-                }.sorted { $0.rank < $1.rank }
+            db.collection("creditCardList").getDocuments { snapshot, _ in // "creditCardList" 컬렉션 생성
+                guard snapshot?.isEmpty == true else { return } // 스냅샷이 비어있을 경우(db에 아무것도 없는 경우)에만 실행
                 
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-            ```
-        - 데이터 쓰기
-            ```swift
-            // Firestore 쓰기
-            let cardID = self.creditCardList[indexPath.row].id
+                let batch = db.batch()
+                let card0Ref = db.collection("creditCardList").document("card0")
+                let card1Ref = db.collection("creditCardList").document("card1")
+                ...
             
-            // Option 1
-            db.collection("creditCardList").document("card\(cardID)").updateData(["isSelected": true])
-            
-            // Option 2
-            db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
-                guard let document = snapshot?.documents.first else { // 검색 결과를 배열로 전달
-                    print("ERROR Firestore fetching document")
-                    return
+                do {
+                    try batch.setData(from: CreditCardDummy.card0, forDocument: card0Ref) // 경로를 지정해 데이터 쓰기
+                    try batch.setData(from: CreditCardDummy.card1, forDocument: card1Ref)
+                    ...
+                } catch let error {
+                    print("ERROR writing card to Firestore \(error.localizedDescription)")
                 }
                 
-                document.reference.updateData(["isSelected": true])
+                batch.commit() // 반드시 커밋을 해줘야 업데이트에 반영이 됨
             }
             ```
-        - 데이터 삭제
-            ```swift
-            // Firestore 삭제
-            let cardID = self.creditCardList[indexPath.row].id
+    - 데이터 읽기
+        ```swift
+        import FirebaseFirestore
+        
+        var db = Firestore.firestore()
+        
+        // Firestore 읽기
+        db.collection("creditCardList").addSnapshotListener { snapshot, error in // creditCardList라는 document를 바라보게 함
+            guard let documents = snapshot?.documents else { // snapshot에 해당 document가 있을 경우에만 실행
+                print("ERROR Firestore fetching document \(String(describing: error))")
+                return
+            }
             
-            // Option 1
-            db.collection("creditCardList").document("card\(cardID)").delete()
-            
-            // Option 2
-            db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
-                guard let document = snapshot?.documents.first else {
-                    print("ERROR Firestore fetching document")
-                    return
+            self.creditCardList = documents.compactMap { doc -> CreditCard? in
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: doc.data())
+                    let creditCard = try JSONDecoder().decode(CreditCard.self, from: jsonData)
+                    return creditCard
+                } catch let error {
+                    print("ERROR JSON Pasring \(error.localizedDescription)")
+                    return nil
                 }
-                
-                document.reference.delete()
+            }.sorted { $0.rank < $1.rank }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-            ```
+        }
+        ```
+    - 데이터 쓰기
+        ```swift
+        // Firestore 쓰기
+        let cardID = self.creditCardList[indexPath.row].id
+        
+        // Option 1
+        db.collection("creditCardList").document("card\(cardID)").updateData(["isSelected": true])
+        
+        // Option 2
+        db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
+            guard let document = snapshot?.documents.first else { // 검색 결과를 배열로 전달
+                print("ERROR Firestore fetching document")
+                return
+            }
+            
+            document.reference.updateData(["isSelected": true])
+        }
+        ```
+    - 데이터 삭제
+        ```swift
+        // Firestore 삭제
+        let cardID = self.creditCardList[indexPath.row].id
+        
+        // Option 1
+        db.collection("creditCardList").document("card\(cardID)").delete()
+        
+        // Option 2
+        db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
+            guard let document = snapshot?.documents.first else {
+                print("ERROR Firestore fetching document")
+                return
+            }
+            
+            document.reference.delete()
+        }
+        ```
 

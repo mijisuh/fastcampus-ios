@@ -17,3 +17,4 @@
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
 | --- | --- | --- |
 | [Spotify 스타일 로그인 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SpotifyStyleLoginSampleApp) | UIKit, Storyboard, AutoLayout | Firebase Authentication |
+| [신용카드 추천 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/CreditCardList) | UIKit, Storyboard, AutoLayout | Firebase Realtime Database, Firebase Cloud Firestore |
