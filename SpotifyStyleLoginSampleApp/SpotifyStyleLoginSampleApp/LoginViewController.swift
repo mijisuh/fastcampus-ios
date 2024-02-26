@@ -20,14 +20,10 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Navigation Bar 숨기기
         self.navigationController?.navigationBar.isHidden = true
-        
-        // Google Sign In
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.configureButton()
     }
     
@@ -67,7 +63,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
-    }
+    @IBAction func appleLoginButtonTapped(_ sender: UIButton) { }
     
 }
