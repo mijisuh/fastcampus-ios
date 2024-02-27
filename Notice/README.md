@@ -1,4 +1,4 @@
-# 실시간 공지사항 팝업 앱
+# 📢 실시간 공지사항 팝업 앱
 
 > - 전체 사용자를 반으로 나눠 무작위로 A안 또는 B안을 보여줌
 > - 사용자가 쓰는 언어, 기기 등으로 사용자 타켓팅을 하여 A안 또는 B안을 보여줌
@@ -48,16 +48,23 @@
 <img width="968" alt="0" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/6e3d065a-b5d5-40cf-9fc4-d9982efd7c36">
 
 - MainViewController 
-<img width="798" alt="1" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/668600a8-555a-454b-a328-5df24843d314">
+
+    <img width="798" alt="1" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/668600a8-555a-454b-a328-5df24843d314">
     
 - NoticeViewController
-<img width="766" alt="3" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/ce716d68-5fec-412f-b890-264f91c458fd">
+
+    <img width="766" alt="3" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/ce716d68-5fec-412f-b890-264f91c458fd">
+
     - MainViewController 위에 띄울 공지 사항 팝업
     - Remote Config를 통해 보여질 수도 있고 가려질 수도 있음
     - Remote Cofig를 통해 팝업에 포함된 각각의 문자열들을 변경할 수 있도록 설정
+
         <img width="1004" alt="4" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/144fc6e2-ce7c-4c96-a4f6-ef445b086365">
+
     - 이벤트 알림 문구를 A안, B안으로 나눠 Remote Config을 활용한 A/B Testing으로 구현 → 사용자를 반으로 나눠 각각 보여줄 수 있음
+
         <img width="703" alt="5" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/d69ca16d-9d1b-4a0c-bd4f-4b01baea6f24">
+
 
 ## 구현 내용
 1. **UI 구성**

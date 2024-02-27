@@ -18,3 +18,4 @@
 | --- | --- | --- |
 | [Spotify 스타일 로그인 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SpotifyStyleLoginSampleApp) | UIKit, Storyboard, AutoLayout | Firebase Authentication |
 | [신용카드 추천 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/CreditCardList) | UIKit, Storyboard, AutoLayout | Firebase Realtime Database, Firebase Cloud Firestore |
+| [실시간 공지사항 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Notice) | UIKit, Storyboard, AutoLayout | Firebase Remote Config, Firebase A/B Testing |
