@@ -75,6 +75,7 @@
 
 ## 전체 화면 구성
 - 원격으로 알림 메세지를 구성해서 전송하고 앱에서는 발송된 원격 알림을 받아서 표현
+
     <img width="410" alt="7" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/2ad7b948-770c-4d2a-9e58-6c0712602728">
 
 ## 구현 내용
