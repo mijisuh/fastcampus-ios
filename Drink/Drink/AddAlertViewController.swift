@@ -8,6 +8,7 @@
 import UIKit
 
 class AddAlertViewController: UIViewController {
+    
     var pickedDate: ((_ date: Date) -> Void)?
 
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -18,7 +19,6 @@ class AddAlertViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func dismissButtonTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }

@@ -69,15 +69,15 @@
 				099683C02B8F19430092F989 /* AppDelegate.swift */,
 				099683C22B8F19430092F989 /* SceneDelegate.swift */,
 				099683D42B8F19650092F989 /* AlertListViewController.swift */,
+				0933F79B2B8F206700943700 /* AddAlertViewController.swift */,
+				092978FD2B8F2E4F007FD95F /* UNNotificationCenter.swift */,
+				0933F7992B8F1CB800943700 /* Alert.swift */,
+				099683D62B8F1ABB0092F989 /* AlertListCell.swift */,
+				099683D72B8F1ABB0092F989 /* AlertListCell.xib */,
 				099683C62B8F19430092F989 /* Main.storyboard */,
 				099683C92B8F19470092F989 /* Assets.xcassets */,
 				099683CB2B8F19470092F989 /* LaunchScreen.storyboard */,
 				099683CE2B8F19470092F989 /* Info.plist */,
-				099683D62B8F1ABB0092F989 /* AlertListCell.swift */,
-				099683D72B8F1ABB0092F989 /* AlertListCell.xib */,
-				0933F7992B8F1CB800943700 /* Alert.swift */,
-				0933F79B2B8F206700943700 /* AddAlertViewController.swift */,
-				092978FD2B8F2E4F007FD95F /* UNNotificationCenter.swift */,
 			);
 			path = Drink;
 			sourceTree = "<group>";

@@ -20,3 +20,4 @@
 | [신용카드 추천 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/CreditCardList) | UIKit, Storyboard, AutoLayout | Firebase Realtime Database, Firebase Cloud Firestore |
 | [실시간 공지사항 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Notice) | UIKit, Storyboard, AutoLayout | Firebase Remote Config, Firebase A/B Testing |
 | [물마시기 알람 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Drink) | UIKit, Storyboard, AutoLayout | UserNotifications |
+| [재난문자 푸시 알림 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Warning) | UIKit, Storyboard, AutoLayout | UserNotifications, APNs, Firebase Cloud Messaging |
