@@ -10,9 +10,7 @@ import UIKit
 class BeerListViewController: UITableViewController {
     
     var beerList = [Beer]()
-    
     var currentPage = 1
-
     var dataTasks = [URLSessionTask]()
     
     override func viewDidLoad() {
