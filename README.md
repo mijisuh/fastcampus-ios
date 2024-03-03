@@ -23,3 +23,8 @@
 | [재난문자 푸시 알림 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Warning) | UIKit, Storyboard, AutoLayout | UserNotifications, APNs, Firebase Cloud Messaging, CocoaPods |
 | [넷플릭스 스타일 영화 추천 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/NetflixStyleSampleApp) | UIKit, SnapKit | UICollectionView, UICollectionViewFlowLayout, SnapKit, Swift Package Manager |
 | [브루어리 소개 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Brewery) | UIKit, SnapKit | URLSession, UITableView, GCD, SnapKit, KingFisher, Swift Package Manager |
+
+### Upper Intermediate
+| 프로젝트 | 구현 방식 | 주요 활용 기술 |
+| --- | --- | --- |
+| [자산관리 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/MyAssets) | SwiftUI, UIKit | SwiftUI, UIHostingController |

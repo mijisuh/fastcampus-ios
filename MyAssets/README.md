@@ -2,11 +2,12 @@
 
 > SwiftUI를 이용해 자산관리 앱 UI를 구성할 수 있음
 
+![Simulator Screen Recording - iPhone 14 - 2024-03-03 at 22 11 49](https://github.com/mijisuh/fastcampus-ios/assets/57468832/609567bc-ed5a-4368-9605-354fa036e871)
 
 ## 주요 개념 정리
 
 <details>
-<summary>SwiftUI</summary>
+<summary>SwiftUI 기본 개념</summary>
 
 ## SwiftUI
 
@@ -19,10 +20,9 @@
 - UIKit의 View는 UI 컴포넌트 중 하나지만 **SwiftUI의 View는 상태 함수**
     - 표현하고자 하는 UI의 속성을 상태로 표현하고 이러한 상태를 함수 형태의 인자로 전달하면 SwiftUI의 프레임워크가 알아서 해석해서 View로 표현
         
-        ![스크린샷 2024-03-03 오후 3.53.40.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/50c69a2b-c0cf-4058-a490-6226fbfbd0bf/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.53.40.png)
+        <img width="533" alt="1" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/5ab69d58-c18c-4023-b736-80728f6ab984">
         
     - **Property Wrapper**: 데이터의 흐름이 외부/내부인지에 따라서 `@State`, `@ObservableObject`로 나누어짐
-        
         
         | @State | @ObservableObject |
         | --- | --- |
@@ -31,7 +31,7 @@
         | Framework Managed(프레임워크에서 자체적으로 관리) | Developer Managed(개발자가 직접 선언체 관리) |
     - Data Flow
         
-        ![스크린샷 2024-03-03 오후 4.00.02.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/35663d93-2cd5-4b68-8e0a-96d25d6585af/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.00.02.png)
+        <img width="776" alt="2" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/ebbb97de-0423-41c6-b12a-2e47a488d5b9">
         
         1. User Interaction을 통한 액션 발생
         2. 액션을 통한 변화는 상태(@State)를 변화시킴
@@ -41,12 +41,12 @@
 - 명령형과 선언형 접근 방식
     - **명령형**: “어떻게”
         
-        ![스크린샷 2024-03-03 오후 3.45.44.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/30808147-fcf2-4617-983a-00e7d8b96d03/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.45.44.png)
+        <img width="614" alt="3" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/b6ce3441-923d-47d3-8249-476cc4ef0567">
         
         - 컨트롤러 코드가 뷰를 인스턴스화 및 구성하고 조건이 변경됨에 따라 지속적으로 업데이트 해야 하는 부담이 있음
     - **선언형**: “무엇을”
         
-        ![스크린샷 2024-03-03 오후 3.46.06.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/71bc6849-2f98-4f76-ad4c-4edd491250fa/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.46.06.png)
+        <img width="614" alt="4" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/f468ab9f-e35a-4a6a-a7a2-c3bfcfa8697b">
         
         - 인터페이스가 원하는 레이아웃을 미러링하는 계층 구조에서 뷰를 선언하고 사용자 인터페이스에 대한 간단한 설명을 만듬 → SwiftUI가 사용자 입력이나 상태 변경과 같은 이벤트에 대한 응답으로 뷰를 그리고 업데이트하는 것을 관리
         - SwiftUI는 사용자 인터페이스에서 뷰를 정의하고 구성하기 위한 도구를 제공
@@ -60,7 +60,7 @@
 </details>
 
 <details>
-<summary>SwiftUI - Container View</summary>
+<summary>SwiftUI의 Container View</summary>
 
 - UIKit에서 반복되는 컨텐츠를 그룹핑하고 나타내는 방법
     - ScrollView와 StackView 결합
@@ -69,7 +69,7 @@
 
 ## Stack
 
-![스크린샷 2024-03-03 오후 5.36.04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/e0958dc8-7979-4658-abb7-0ff98968ae65/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.36.04.png)
+<img width="864" alt="5" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/83ddcb70-8d5e-4fa6-bc35-26e650398879">
 
 - SwiftUI에서 가장 기본적으로 사용하는 레이아웃 컨테이너
 - 뷰 컨테이너를 수평, 수직 방향으로 배치하거나 겹쳐서 쌓아서 그룹화 가능
@@ -78,21 +78,21 @@
     - ZStack
 - LazyStack
     
-    ![스크린샷 2024-03-03 오후 5.42.27.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/5f47fddd-3ec7-48e6-99be-ae81e786b5d5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.42.27.png)
+    <img width="772" alt="6" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/12412ad5-09c0-4bec-982d-2e261ac194fb">
     
     - 뷰 또는 뷰 그룹 반복
     - 콘텐츠가 컨테이너 범위를 넘어서서 확장될 수 있도록 스크롤 뷰 내부에 스택 뷰 배치
-- Stack vs LazyStack
+- **Stack vs LazyStack**
     - Stack은 자식 뷰를 한번에 모두 로드하기 때문에 레이아웃을 빠르고 안정적으로 보이게 만들 수 있음 → 로드할 때 시스템 단에서 하위 뷰의 크기와 모양을 다 알고 있기 때문에
     - LazyStack은 성능을 위해서 어느 정도 레이아웃 정확성을 등가 교환 → 하위 뷰가 표시될 때만 그 크기와 위치를 계산
-    - 자식 뷰가 너무 많거나 예측 불가능한 경우에만 LazyStack을 사용하는 것을 권고
+    - **자식 뷰가 너무 많거나 예측 불가능한 경우에만 LazyStack을 사용하는 것을 권고**
 - 스크롤 뷰를 포함하고 있지 않아 컨테이너 범위를 넘어가는 컨텐츠가 있는 경우에는 스크롤 뷰를 먼저 설정하고 내부에 정의
 
 ## Grid
 
-![스크린샷 2024-03-03 오후 5.48.17.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/77bba9ef-57a8-4c7d-9fc3-7fece39770b2/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.48.17.png)
+<img width="769" alt="7" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/aad067f5-100c-4a24-a1ca-001a02d6093e">
 
-- 뷰를 수평, 수직 동시에 배치하려면 LazyHGrid, LazyVGrid 사용
+- 뷰를 수평과 수직 동시에 배치하려면 LazyHGrid, LazyVGrid 사용
 - 정사각형 컨테이너에 자연스럽게 표시되는 컨텐츠를 레이아웃하는데 적합한 컨테이너 뷰
 - Grid는 더 큰 장치에 표시하기 위해서 사용자 인터페이스 레이아웃을 확장하는데 사용
     - 아이폰 앱 화면 → 아이패드 앱 화면 확장
@@ -100,16 +100,16 @@
 
 ## List
 
-![스크린샷 2024-03-03 오후 5.56.12.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/5131d802-d6b7-4e5c-8aee-52284fa3621c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.56.12.png)
+<img width="418" alt="8" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/dee52fea-515e-4ebd-acf5-070c44d3a702">
 
-- Divider나 Indicator 같은 플랫폼에 적합한 시각적 스타일 포함
+- Divider나 Indicator와 같은 플랫폼에 적합한 시각적 스타일 포함
 - 항목 삽입, 재정렬, 삭제 등 상호작용 지원
 - 내부의 행이 Lazy하게 로드됨
 - 스크롤 뷰가 포함됨
 
 ## Form
 
-![스크린샷 2024-03-03 오후 5.59.01.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1f318835-720d-4052-8329-915a62686096/a74bc369-2d7a-4590-ad29-d3df5960e972/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-03_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.59.01.png)
+<img width="926" alt="9" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/ac696194-61d9-4367-8bf6-04a6d95fa0ae">
 
 - 기본 설정 화면을 구축하는데 적합
 - 플랫폼 별로 UI 구성을 다르게 개발할 필요 없이 동일한 코드를 자동으로 각 플랫폼에 적합한 방식으로 내용을 표시해줌
@@ -487,7 +487,7 @@
             ```
             
 6. 자산 관리 리스트 만들기
-    - json 디코딩 해서 데이터 받아옴 → Entity 생성
+    - json 파일을 디코딩해서 Entity에 데이터 받아옴
         
         ```swift
         class Asset: Identifiable, ObservableObject, Decodable {
@@ -515,7 +515,7 @@
         }
         ```
         
-    - 외부에서 별도의 데이터 모델을 이용해서 데이터를 디코딩한 다음에 ObservableObject를 이용해서 데이터를 뿌려줌
+    - 외부에서 별도의 데이터 모델을 이용해서 데이터를 디코딩한 다음에 `ObservableObject`를 이용해서 데이터를 뿌려줌
         
         ```swift
         class AssetSummaryData: ObservableObject {
@@ -581,7 +581,7 @@
         ```
         
     - 자산 리스트 내부에 TabMenu 추가
-        - 헤더 뷰 구현: 업데이트 여부 표시
+        - 헤더 뷰 구현: 빨간 색 점으로 업데이트 여부 표시
             
             ```swift
             struct TabMenuView: View {
