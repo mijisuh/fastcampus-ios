@@ -1,7 +1,7 @@
 # Fast Campus
 > '30개 프로젝트로 배우는 iOS 앱 개발 with Swift 초격차 패키지'를 수강하며 진행한 프로젝트
 
-### Basic
+### 🐤 Basic
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
 | --- | --- | --- |
 | [명언 생성기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/QuotesGenerator) | UIKit, Storyboard, AutoLayout | UIKit, Storyboard, AutoLayout
@@ -13,7 +13,7 @@
 | [일기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Weather) | UIKit, Storyboard, AutoLayout | URLSession, Codable, OpenWeatherAPI |
 | [코로나 현황판 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/COVID19) | UIKit, Storyboard, AutoLayout | Alamofire, CocoaPods, Corona-19-API |
 
-### Intermediate
+### 🚶‍♂️ Intermediate
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
 | --- | --- | --- |
 | [Spotify 스타일 로그인 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SpotifyStyleLoginSampleApp) | UIKit, Storyboard, AutoLayout | Firebase Authentication, CocoaPods |
@@ -24,7 +24,9 @@
 | [넷플릭스 스타일 영화 추천 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/NetflixStyleSampleApp) | UIKit, SnapKit | UICollectionView, UICollectionViewFlowLayout, SnapKit, Swift Package Manager |
 | [브루어리 소개 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Brewery) | UIKit, SnapKit | URLSession, UITableView, GCD, SnapKit, KingFisher, Swift Package Manager |
 
-### Upper Intermediate
+### 🏃‍♂️ Upper Intermediate
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
 | --- | --- | --- |
 | [자산관리 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/MyAssets) | SwiftUI, UIKit | SwiftUI, UIHostingController |
+| [앱 스토어 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/AppStore) | UIKit, SnapKit | UIActivityViewController, UICollectionView |
+| [지하철 도착 정보 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SubwayStation) | UIKit, SnapKit | UISearchController, UITableView, UIRefreshController, Alamofire |
