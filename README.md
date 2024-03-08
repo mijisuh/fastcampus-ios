@@ -31,3 +31,4 @@
 | [앱 스토어 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/AppStore) | UIKit, SnapKit | UIActivityViewController, UICollectionView |
 | [지하철 도착 정보 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SubwayStation) | UIKit, SnapKit | UISearchController, UITableView, UIRefreshController, Alamofire |
 | [인스타그램 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Outstagram) | UIKit, SnapKit | UITabBarController, UINavigationController, UITableView, UICollectionView, UIAlertController, UIImagePickerViewController |
+| [GitHub 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/GitHubRepository) | UIKit, SnapKit | RxSwift, RxCocoa, UITableViewController, UIRefreshControl |
