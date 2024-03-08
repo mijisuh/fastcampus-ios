@@ -7,7 +7,7 @@
 
 ![Simulator Screen Recording - iPhone 14 - 2024-03-06 at 20 52 48](https://github.com/mijisuh/fastcampus-ios/assets/57468832/70ad8124-1ff9-45da-8100-200fb10dd492)
 
-## 주요 개념 정리
+## 개념 정리
 
 <details>
 <summary>버전 관리와 Git</summary>
