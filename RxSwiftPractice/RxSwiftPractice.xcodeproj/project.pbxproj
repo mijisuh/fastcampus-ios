@@ -30,6 +30,8 @@
 		096D2F562B9A96FC00EE3E97 /* Subjects.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subjects.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		096D2F572B9A9F2B00EE3E97 /* FilteringOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilteringOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		096D2F582B9AA7A400EE3E97 /* TransformingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		096D2F632B9B284B00EE3E97 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		096D2F642B9B38C800EE3E97 /* TimeBasedOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBasedOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1D1FB0EA0BB20CE5B6F564A8 /* Pods_RxSwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0ADC7E31A0EDDF6079E7D58 /* Pods-RxSwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		D7C0142AE90A98351CEDD36D /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 				096D2F562B9A96FC00EE3E97 /* Subjects.playground */,
 				096D2F572B9A9F2B00EE3E97 /* FilteringOperators.playground */,
 				096D2F582B9AA7A400EE3E97 /* TransformingOperators.playground */,
+				096D2F632B9B284B00EE3E97 /* CombiningOperators.playground */,
+				096D2F642B9B38C800EE3E97 /* TimeBasedOperators.playground */,
 				096D2F3F2B99C1DC00EE3E97 /* RxSwiftPractice */,
 				096D2F3E2B99C1DC00EE3E97 /* Products */,
 				937CA4342E73C81FC59A3DFD /* Pods */,
