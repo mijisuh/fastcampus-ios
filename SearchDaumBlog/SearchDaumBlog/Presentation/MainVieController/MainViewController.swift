@@ -61,6 +61,17 @@ final class MainViewController: UIViewController {
                     }
             }
         
+        // 에러 처리
+        let alertForErrorMessage = blogError
+            .map { message -> Alert in
+                return (
+                    title: "앗!",
+                    message: "예상치 못한 오류가 발생했습니다. 잠시 후 다시 시도해주세요. \(message)",
+                    actions: [.confirm],
+                    style: .alert
+                )
+            }
+        
         // FilterView를 선택했을 때 나오는 alertSheet를 선택했을 때 type
         let sortedType = alertActionTapped
             .filter {
@@ -84,17 +95,6 @@ final class MainViewController: UIViewController {
         }
         .bind(to: blogListView.cellData)
         .disposed(by: disposeBag)
-        
-        // 에러 처리
-        let alertForErrorMessage = blogError
-            .map { message -> Alert in
-                return (
-                    title: "앗!",
-                    message: "예상치 못한 오류가 발생했습니다. 잠시 후 다시 시도해주세요. \(message)",
-                    actions: [.confirm],
-                    style: .alert
-                )
-            }
         
         let alertSheetForSorting = blogListView.headerView.sortButtonTapped
             .map { _ -> Alert in

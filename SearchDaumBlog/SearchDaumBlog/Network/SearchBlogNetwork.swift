@@ -9,15 +9,33 @@ import Foundation
 import RxSwift
 
 enum SearchNetworkError: Error {
+    
     case invalidURL
     case invalidJSON
     case networkError
+    
 }
 
 class SearchBlogNetwork {
     
     private let session: URLSession
     let api = SearchBlogAPI()
+    
+    // Use Plist for get API_KEY
+    private var apiKey: String {
+        get {
+            // 1
+            guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
+                fatalError("Couldn't find file 'Info.plist'.")
+            }
+            // 2
+            let plist = NSDictionary(contentsOfFile: filePath)
+            guard let value = plist?.object(forKey: "API_KEY") as? String else {
+                fatalError("Couldn't find key 'API_KEY' in 'Info.plist'.")
+            }
+            return value
+        }
+    }
     
     init(session: URLSession = .shared) {
         self.session = session
@@ -45,4 +63,5 @@ class SearchBlogNetwork {
             }
             .asSingle()
     }
+    
 }

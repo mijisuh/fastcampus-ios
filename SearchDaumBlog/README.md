@@ -201,3 +201,294 @@
 <img width="655" alt="8" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/f21ae983-6925-40e3-9b97-4a7674749567">
 
 ## 구현 내용
+
+1. SearchBar
+    - 검색 버튼 클릭 이벤트 처리
+        - Subject 정의
+            
+            ```swift
+            let searchButtonTapped = PublishRelay<Void>() // onNext 이벤트만 받음
+            ```
+            
+        - 버튼 클릭 이벤트 처리
+            
+            ```swift
+            Observable
+                .merge(
+                    self.rx.searchButtonClicked.asObservable(), // SearchBar 버튼(키보드)
+                    searchButton.rx.tap.asObservable() // 직접 만든 검색 버튼
+                )
+                .bind(to: searchButtonTapped) // 두 이벤트가 어떤 순서든 이벤트가 발생할 때마다 searchButtonTapped에 이벤트 방출
+                .disposed(by: disposeBag)
+            
+            searchButtonTapped
+                .asSignal()
+                .emit(to: self.rx.endEditing) // 탭 이벤트 발생 시 키보드 내려감
+                .disposed(by: disposeBag)
+            ```
+            
+    - 입력된 텍스트를 외부로 전달
+        - Observable 정의
+            
+            ```swift
+            var shouldLoadResult = Observable<String>.of("")
+            ```
+            
+        - searchButtonTapped가 트리거 역할
+            
+            ```swift
+            shouldLoadResult = searchButtonTapped
+                .withLatestFrom(self.rx.text) { $1 ?? "" } // 가장 최신의 text을 전달(없으면 "")
+                .filter { !$0.isEmpty }
+                .distinctUntilChanged() // 동일한 입력인지 확인해서 중복을 없애고 불필요한 네트워크 통신이 발생하지 않도록 함
+            ```
+            
+2. FilterView
+    - 정렬 버튼 이벤트 처리
+        - Subject 정의
+            
+            ```swift
+            let sortButtonTapped = PublishRelay<Void>() // FilterView 외부에서 관찰됨(클릭 여부만 방출)
+            ```
+            
+        - 버튼 클릭 이벤트 처리
+            
+            ```swift
+            sortButton.rx.tap // sortButton이 tap 되었다는 이벤트를 방출하면
+                .bind(to: sortButtonTapped) // 외부에서 sortButtonTapped라는 릴레이를 바라보면 그 이벤트를 전달받을 수 있음
+                .disposed(by: disposeBag)
+            ```
+            
+3. BlogListView
+    - MainViewController에서 BlogListView로 데이터 전달
+        - Subject 정의
+            
+            ```swift
+            let cellData = PublishSubject<[BlogListCellData]>()
+            ```
+            
+        - 데이터 전달: cf. UITableViewDelegate의 cellForRowAt 메서드
+            
+            ```swift
+            cellData
+                .asDriver(onErrorJustReturn: [])
+                .drive(self.rx.items) { tableView, row, data in // tableView의 items을 받아서 어떻게 전달할 것인지 결정
+                    let indexPath = IndexPath(row: row, section: 0) // 첫번째 섹션
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "BlogListCell", for: indexPath) as! BlogListCell
+                    cell.setDate(data)
+                    return cell
+                }
+                .disposed(by: disposeBag)
+            ```
+            
+4. MainViewController
+    - SearchBar에 입력된 텍스트로 네트워크 통신
+        - SearchBar에 입력된 텍스트로 네트워크 통신
+            
+            ```swift
+            let blogResult = searchBar.shouldLoadResult
+                .flatMapLatest { query in
+                    SearchBlogNetwork().searchBlog(query: query)
+                }
+                .share() // 스트림을 새로 만들지 않고 공유
+            
+            let blogValue = blogResult
+                .compactMap { data -> DKBlog? in
+                    guard case .success(let value) = data else { return nil }
+                    return value
+                }
+            
+            let blogError = blogResult
+                .compactMap { data -> String? in
+                    guard case .failure(let error) = data else { return nil }
+                    return error.localizedDescription
+                }
+            ```
+            
+        - 네트워크를 통해 가져온 값을 cellData로 만듬
+            
+            ```swift
+            let cellData = blogValue
+                .map { blog -> [BlogListCellData] in
+                    return blog.documents
+                        .map { doc in
+                            let thumnailURL = URL(string: doc.thumbnail ?? "") // String -> URL
+                            return BlogListCellData(thumbnailURL: thumnailURL, name: doc.name, title: doc.title, datetime: doc.datetime)
+                        }
+                }
+            ```
+            
+    - AlertAction 클릭 이벤트 처리
+        - Subject 정의
+            
+            ```swift
+            let alertActionTapped = PublishRelay<AlertAction>()
+            ```
+            
+        - AlertSheet에서 선택한 타입 가져오기
+            
+            ```swift
+            // FilterView를 선택했을 때 나오는 alertSheet를 선택했을 때 type
+            let sortedType = alertActionTapped
+                .filter {
+                    switch $0 {
+                    case .title, .datetime: return true
+                    default: return false
+                    }
+                }
+                .startWith(.title) // 아무 것도 선택하지 않았을 때 초기값
+            ```
+            
+        - MainViewController → BlogListView
+            
+            ```swift
+            Observable.combineLatest(
+                sortedType, // 정렬 타입과
+                cellData // 데이터가
+            ) { type, data -> [BlogListCellData] in // 모이면 BlogListView에게 [BlogListCellData] 형태로 전달
+                switch type {
+                case .title: return data.sorted { $0.title ?? "" < $1.title ?? "" }
+                case .datetime: return data.sorted { $0.datetime ?? Date() > $1.datetime ?? Date() } // 최신 날짜 부터
+                default: return data
+                }
+            }
+            .bind(to: blogListView.cellData)
+            .disposed(by: disposeBag)
+            ```
+            
+    - Alert 처리
+        - 통신 에러 처리 → Alert 생성
+            
+            ```swift
+            let alertForErrorMessage = blogError
+                .map { message -> Alert in // Alert로 만들어줌
+                    return (
+                        title: "앗!",
+                        message: "예상치 못한 오류가 발생했습니다. 잠시 후 다시 시도해주세요. \(message)",
+                        actions: [.confirm],
+                        style: .alert
+                    )
+                }
+            ```
+            
+        - 정렬 버튼 클릭 이벤트 → Alert 생성
+            
+            ```swift
+            let alertSheetForSorting = blogListView.headerView.sortButtonTapped
+                .map { _ -> Alert in
+                    return (title: nil, message: nil, actions: [.title, .datetime, .cancel], style: .actionSheet)
+                }
+            ```
+            
+        - 정렬 버튼 클릭 시 or 통신 에러 발생 시 Alert 보여주기
+            
+            ```swift
+            Observable
+                .merge(
+                    alertSheetForSorting,
+                    alertForErrorMessage
+                )
+                .asSignal(onErrorSignalWith: .empty())
+                .flatMapLatest { alert -> Signal<AlertAction> in
+                    let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
+                    return self.presentAlertController(alertController, actions: alert.actions)
+                }
+                .emit(to: alertActionTapped)
+                .disposed(by: disposeBag)
+            ```
+            
+            ```swift
+            // Alert 액션을 받았을 때 AlertController 생성
+            func presentAlertController<Action: AlertActionConvertible>(_ alertController: UIAlertController, actions: [Action]) -> Signal<Action> {
+                if actions.isEmpty { return .empty() }
+                return Observable
+                    .create { [weak self] observer in
+                        guard let self = self else { return Disposables.create() }
+                        
+                        for action in actions {
+                            alertController.addAction(
+                                UIAlertAction(
+                                    title: action.title,
+                                    style: action.style
+                                ) { _ in
+                                    observer.onNext(action)
+                                    observer.onCompleted()
+                                }
+                            )
+                        }
+                        
+                        self.present(alertController, animated: true)
+                        
+                        return Disposables.create {
+                            alertController.dismiss(animated: true)
+                        }
+                    }
+                    .asSignal(onErrorSignalWith: .empty())
+            }
+            ```
+            
+5. KaKao REST API 활용
+    - [참고 문서](https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide)
+    - 개발자 사이트에서 REST API 키 발급
+    - Xcode info.plist에 Key 저장(왜 하는지 모르겠음..)
+        - URL types - item0 - Document Role: Editor
+        - URL types - item0 - URL Schemes - item0: kakao + REST API 키
+6. 네트워크 통신
+    - API 호출
+        
+        ```swift
+        func searchBlog(query: String) -> Single<Result<DKBlog, SearchNetworkError>> { // Result는 Swift에서 기본적으로 제공하는 enum으로 성공/실패 두가지 경우를 받음
+            guard let url = api.searchBlog(query: query).url else { return .just(.failure(.invalidURL)) }
+            
+            let request = NSMutableURLRequest(url: url)
+            request.httpMethod = "GET"
+            request.setValue("KakaoAK ~", forHTTPHeaderField: "Authorization") // REST API Key
+            
+            return session.rx.data(request: request as URLRequest)
+                .map { data in
+                    do {
+                        let blogData = try JSONDecoder().decode(DKBlog.self, from: data)
+                        return .success(blogData)
+                    } catch {
+                        return .failure(.invalidJSON)
+                    }
+                }
+                .catch { _ in
+                        .just(.failure(.networkError))
+                }
+                .asSingle()
+        }
+        ```
+        
+        - URLComponents로 URL 구성
+        - NSMutableURLRequest 생성
+        - URLSession을 rx로 감싸서 이벤트 받아옴
+    - parsing
+        - JSON에 Date라는 타입이 없기 때문에 커스텀한 파싱 함수 필요
+            
+            ```swift
+            extension Date {
+                
+                // CodingKey -> Date
+                static func parse<K: CodingKey>(_ values: KeyedDecodingContainer<K>, key: K) -> Date? {
+                    guard let dateString = try? values.decode(String.self, forKey: key),
+                          let date = from(dateString: dateString)
+                    else { return nil }
+                    return date
+                }
+                
+                static func from(dateString: String) -> Date? {
+                    let dateFormatter = DateFormatter()
+                    
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX" // API마다 포맷이 다르므로 문서 확인 필요
+                    dateFormatter.locale = Locale(identifier: "ko_kr")
+                    
+                    if let date = dateFormatter.date(from: dateString) {
+                        return date
+                    } else {
+                        return nil
+                    }
+                }
+                
+            }
+            ```

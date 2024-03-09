@@ -28,7 +28,7 @@ struct DKDocument: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.title =  try? values.decode(String?.self, forKey: .title)?
+        self.title = try? values.decode(String?.self, forKey: .title)?
             .replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             .replacingOccurrences(of: "&[^;]+;", with: "", options: .regularExpression, range: nil)
         self.name = try? values.decode(String?.self, forKey: .name)
