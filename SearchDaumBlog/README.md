@@ -91,17 +91,17 @@
         ```
         
 - Trait
-    - 에러를 방출하지 않는 특별한 Observable
+    - 에러를 방출하지 않는 특별한 Observable → onNext만 취함
     - 모든 과정은 Main Thread에서 이뤄짐
     - **스트림 공유가 가능**
-        - 구독자가 생길 때마다 매번 스트림을 생성하는 것이 아닌 공유를 하기 때문에 리소스 낭비를 줄일 수 있음
+        - 구독자가 생길 때마다 매번 스트림을 생성하는 것이 아닌 **공유**를 하기 때문에 리소스 낭비를 줄일 수 있음
     - asDriver나 asSingal 같은 메서드를 통해서 기존 Observable을 Driver, Signal로 전환 가능
     - **Driver**: 초기값 || 최신값 replay
     - **Signal**: 구독한 이후에 발생하는 값 전달
 
 ## Rx Extension
 
-- 기존 CocoaFramework에서의 객체들을 Rx 환경에서 사용할 수 있도록 커스텀하는 방법 제공
+- 기존 CocoaFramework에서의 객체들을 **Rx 환경에서 사용할 수 있도록 커스텀**하는 방법 제공
     
     <img width="812" alt="3" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/557be6be-b761-4074-b693-c9a1455a92cd">
 
@@ -204,10 +204,10 @@
 
 1. SearchBar
     - 검색 버튼 클릭 이벤트 처리
-        - Subject 정의
+        - Relay 정의(RxSwift의 Subject와 유사하지만 UI 이벤트에 특화되어 있음)
             
             ```swift
-            let searchButtonTapped = PublishRelay<Void>() // onNext 이벤트만 받음
+            let searchButtonTapped = PublishRelay<Void>() // onNext 이벤트만 방출
             ```
             
         - 버튼 클릭 이벤트 처리
@@ -245,7 +245,7 @@
             
 2. FilterView
     - 정렬 버튼 이벤트 처리
-        - Subject 정의
+        - Relay 정의
             
             ```swift
             let sortButtonTapped = PublishRelay<Void>() // FilterView 외부에서 관찰됨(클릭 여부만 방출)
@@ -319,7 +319,7 @@
             ```
             
     - AlertAction 클릭 이벤트 처리
-        - Subject 정의
+        - Relay 정의
             
             ```swift
             let alertActionTapped = PublishRelay<AlertAction>()

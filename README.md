@@ -33,3 +33,4 @@
 | [인스타그램 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Outstagram) | UIKit, SnapKit | UITabBarController, UINavigationController, UITableView, UICollectionView, UIAlertController, UIImagePickerViewController |
 | [GitHub 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/GitHubRepository) | UIKit, SnapKit | RxSwift, RxCocoa, UITableViewController, UIRefreshControl |
 | [다음 블로그 검색 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SearchDaumBlog) | UIKit, SnapKit | RxSwift, RxCocoa, UITableView, UISearchBar, UIAlerController |
+| [당근마켓 스타일 중고 거래 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/UsedGoodsUpload) | UIKit, SnapKit | RxSwift, RxCocoa, MVVM, UITableView |

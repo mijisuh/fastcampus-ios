@@ -24,13 +24,9 @@ final class BlogListView: UITableView {
         )
     )
     
-    // MainViewController -> BlogListView
-    let cellData = PublishSubject<[BlogListCellData]>()
-    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
-        bind()
         attribute()
     }
     
@@ -38,8 +34,10 @@ final class BlogListView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
-        cellData
+    func bind(_ viewModel: BlogListViewModel) {
+        headerView.bind(viewModel.filterViewModel)
+        
+        viewModel.cellData
             .asDriver(onErrorJustReturn: [])
             .drive(self.rx.items) { tableView, row, data in // tableView의 item을 받아서 어떻게 전달할 것인지
                 let indexPath = IndexPath(row: row, section: 0) // 첫번째 섹션

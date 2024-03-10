@@ -17,13 +17,11 @@ final class FilterView: UITableViewHeaderFooterView {
     let sortButton = UIButton()
     let bottomBorder = UIView()
     
-    // FilterView 외부에서 관찰
-    let sortButtonTapped = PublishRelay<Void>()
+    
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        bind()
         attribute()
         layout()
     }
@@ -32,10 +30,11 @@ final class FilterView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
+    func bind(_ viewModel: FilterViewModel) {
         sortButton.rx.tap // sortButton이 tap 되었다는 이벤트를 방출하면
-            .bind(to: sortButtonTapped) // 외부에서 sortButtonTapped라는 릴레이를 바라보면 그 이벤트를 전달받을 수 있음
+            .bind(to: viewModel.sortButtonTapped) // 외부에서 sortButtonTapped라는 릴레이를 바라보면 그 이벤트를 전달받을 수 있음
             .disposed(by: disposeBag)
+
     }
     
     private func attribute() {

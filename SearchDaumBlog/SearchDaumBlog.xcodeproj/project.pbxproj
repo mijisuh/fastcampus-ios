@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091280DE2B9C555A00CF4259 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091280DD2B9C555A00CF4259 /* SearchBarViewModel.swift */; };
+		091280E02B9C56CB00CF4259 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091280DF2B9C56CB00CF4259 /* FilterViewModel.swift */; };
+		091280E22B9C574100CF4259 /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091280E12B9C574100CF4259 /* BlogListViewModel.swift */; };
+		091280E42B9C587B00CF4259 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091280E32B9C587B00CF4259 /* MainViewModel.swift */; };
+		091280E62B9C5B3300CF4259 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091280E52B9C5B3200CF4259 /* MainModel.swift */; };
 		096D2F722B9B6DE400EE3E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D2F712B9B6DE400EE3E97 /* AppDelegate.swift */; };
 		096D2F742B9B6DE400EE3E97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D2F732B9B6DE400EE3E97 /* SceneDelegate.swift */; };
 		096D2F7B2B9B6DE900EE3E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096D2F7A2B9B6DE900EE3E97 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		091280DD2B9C555A00CF4259 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		091280DF2B9C56CB00CF4259 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		091280E12B9C574100CF4259 /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
+		091280E32B9C587B00CF4259 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		091280E52B9C5B3200CF4259 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		096D2F6E2B9B6DE400EE3E97 /* SearchDaumBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDaumBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096D2F712B9B6DE400EE3E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096D2F732B9B6DE400EE3E97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				096D2F922B9B6E7800EE3E97 /* MainViewController.swift */,
+				091280E32B9C587B00CF4259 /* MainViewModel.swift */,
 				096D2FA02B9B7BC800EE3E97 /* SubComponents */,
+				091280E52B9C5B3200CF4259 /* MainModel.swift */,
 			);
 			path = MainVieController;
 			sourceTree = "<group>";
@@ -134,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				096D2F942B9B6F9F00EE3E97 /* SearchBar.swift */,
+				091280DD2B9C555A00CF4259 /* SearchBarViewModel.swift */,
 			);
 			path = SearchBar;
 			sourceTree = "<group>";
@@ -143,6 +156,7 @@
 			children = (
 				096D2F982B9B762700EE3E97 /* BlogListView.swift */,
 				096D2FA42B9B7C2E00EE3E97 /* SubComponents */,
+				091280E12B9C574100CF4259 /* BlogListViewModel.swift */,
 			);
 			path = BlogListView;
 			sourceTree = "<group>";
@@ -152,6 +166,7 @@
 			children = (
 				096D2F962B9B748600EE3E97 /* FilterView.swift */,
 				096D2F9A2B9B763D00EE3E97 /* BlogListCell.swift */,
+				091280DF2B9C56CB00CF4259 /* FilterViewModel.swift */,
 			);
 			path = SubComponents;
 			sourceTree = "<group>";
@@ -247,18 +262,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091280E02B9C56CB00CF4259 /* FilterViewModel.swift in Sources */,
 				096D2F932B9B6E7800EE3E97 /* MainViewController.swift in Sources */,
 				096D2F9B2B9B763D00EE3E97 /* BlogListCell.swift in Sources */,
 				099975DD2B9BE72200AEB7A0 /* DKBlog.swift in Sources */,
 				096D2F992B9B762700EE3E97 /* BlogListView.swift in Sources */,
 				099975DF2B9BEB0300AEB7A0 /* SearchBlogAPI.swift in Sources */,
 				096D2F9D2B9B764B00EE3E97 /* BlogListCellData.swift in Sources */,
+				091280E22B9C574100CF4259 /* BlogListViewModel.swift in Sources */,
 				096D2F952B9B6FA000EE3E97 /* SearchBar.swift in Sources */,
 				096D2F722B9B6DE400EE3E97 /* AppDelegate.swift in Sources */,
 				096D2F972B9B748600EE3E97 /* FilterView.swift in Sources */,
+				091280E62B9C5B3300CF4259 /* MainModel.swift in Sources */,
 				096D2F742B9B6DE400EE3E97 /* SceneDelegate.swift in Sources */,
+				091280DE2B9C555A00CF4259 /* SearchBarViewModel.swift in Sources */,
 				099975E22B9BEC3900AEB7A0 /* SearchBlogNetwork.swift in Sources */,
 				096D2FA62B9B7D3500EE3E97 /* AlertActionConvertible.swift in Sources */,
+				091280E42B9C587B00CF4259 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
