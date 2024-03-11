@@ -1,0 +1,887 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0912813D2B9E195C00CF4259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912813C2B9E195C00CF4259 /* AppDelegate.swift */; };
+		0912813F2B9E195C00CF4259 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912813E2B9E195C00CF4259 /* SceneDelegate.swift */; };
+		091281462B9E195E00CF4259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091281452B9E195E00CF4259 /* Assets.xcassets */; };
+		091281492B9E195E00CF4259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091281472B9E195E00CF4259 /* LaunchScreen.storyboard */; };
+		091281A42B9E1F2600CF4259 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281A32B9E1F2600CF4259 /* LocationData.swift */; };
+		091281A72B9E1F5200CF4259 /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281A62B9E1F5200CF4259 /* KLDocument.swift */; };
+		091281A92B9E203000CF4259 /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281A82B9E203000CF4259 /* DetailListCellData.swift */; };
+		091281AB2B9E213500CF4259 /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281AA2B9E213500CF4259 /* LocationInformationViewController.swift */; };
+		091281AD2B9E219B00CF4259 /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281AC2B9E219B00CF4259 /* LocationInformationViewModel.swift */; };
+		091281BE2B9E268C00CF4259 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281BD2B9E268C00CF4259 /* MTMapViewError.swift */; };
+		091281C02B9E2B6800CF4259 /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281BF2B9E2B6800CF4259 /* DetailListCell.swift */; };
+		091281C22B9E2D2E00CF4259 /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281C12B9E2D2E00CF4259 /* DetailListBackgroundView.swift */; };
+		091281C42B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281C32B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift */; };
+		091281C62B9ED36900CF4259 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281C52B9ED36900CF4259 /* LocalAPI.swift */; };
+		091281C92B9ED4FF00CF4259 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281C82B9ED4FF00CF4259 /* LocalNetwork.swift */; };
+		091281CB2B9ED6F500CF4259 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091281CA2B9ED6F500CF4259 /* LocationInformationModel.swift */; };
+		09C5EC7D2B9EEFF700F138ED /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC7C2B9EEFF700F138ED /* OpenGLES.framework */; };
+		09C5EC7F2B9EF00000F138ED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC7E2B9EF00000F138ED /* SystemConfiguration.framework */; };
+		09C5EC812B9EF00B00F138ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC802B9EF00B00F138ED /* CoreLocation.framework */; };
+		09C5EC832B9EF01300F138ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC822B9EF01300F138ED /* QuartzCore.framework */; };
+		09C5EC852B9EF01B00F138ED /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC842B9EF01B00F138ED /* libc++.tbd */; };
+		09C5EC872B9EF02200F138ED /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC862B9EF02200F138ED /* libxml2.tbd */; };
+		09C5EC892B9EF02A00F138ED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5EC882B9EF02A00F138ED /* libsqlite3.tbd */; };
+		09C5ECB12B9EF06900F138ED /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC8C2B9EF06900F138ED /* map_pinup_custom@3x.png */; };
+		09C5ECB22B9EF06900F138ED /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC8D2B9EF06900F138ED /* map_pin_custom.png */; };
+		09C5ECB32B9EF06900F138ED /* shadow_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC8E2B9EF06900F138ED /* shadow_balloon.png */; };
+		09C5ECB42B9EF06900F138ED /* map_pinup.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC8F2B9EF06900F138ED /* map_pinup.png */; };
+		09C5ECB52B9EF06900F138ED /* detail_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC902B9EF06900F138ED /* detail_button.png */; };
+		09C5ECB62B9EF06900F138ED /* map_pin_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC912B9EF06900F138ED /* map_pin_custom@3x.png */; };
+		09C5ECB72B9EF06900F138ED /* map_pinup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC922B9EF06900F138ED /* map_pinup@3x.png */; };
+		09C5ECB82B9EF06900F138ED /* map_pin_shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC932B9EF06900F138ED /* map_pin_shadow@3x.png */; };
+		09C5ECB92B9EF06900F138ED /* copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC942B9EF06900F138ED /* copyright.png */; };
+		09C5ECBA2B9EF06900F138ED /* th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC952B9EF06900F138ED /* th_line.png */; };
+		09C5ECBB2B9EF06900F138ED /* map_pin_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC962B9EF06900F138ED /* map_pin_red@3x.png */; };
+		09C5ECBC2B9EF06900F138ED /* daum_copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC972B9EF06900F138ED /* daum_copyright.png */; };
+		09C5ECBD2B9EF06900F138ED /* map_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC982B9EF06900F138ED /* map_pin@3x.png */; };
+		09C5ECBE2B9EF06900F138ED /* map_present_tracking.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC992B9EF06900F138ED /* map_present_tracking.png */; };
+		09C5ECBF2B9EF06900F138ED /* map_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5EC9A2B9EF06900F138ED /* map_pin_red.png */; };
+		09C5ECC02B9EF06900F138ED /* info_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECA42B9EF06900F138ED /* info_box.png */; };
+		09C5ECC12B9EF06900F138ED /* point_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECA52B9EF06900F138ED /* point_sprite.png */; };
+		09C5ECC22B9EF06900F138ED /* map_pinup_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECA62B9EF06900F138ED /* map_pinup_custom.png */; };
+		09C5ECC32B9EF06900F138ED /* info_box_tail.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECA72B9EF06900F138ED /* info_box_tail.png */; };
+		09C5ECC42B9EF06900F138ED /* noimage256.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECA82B9EF06900F138ED /* noimage256.png */; };
+		09C5ECC52B9EF06900F138ED /* map_present_direction.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECA92B9EF06900F138ED /* map_present_direction.png */; };
+		09C5ECC62B9EF06900F138ED /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECAA2B9EF06900F138ED /* map_pin.png */; };
+		09C5ECC72B9EF06900F138ED /* map_present.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECAB2B9EF06900F138ED /* map_present.png */; };
+		09C5ECC82B9EF06900F138ED /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECAC2B9EF06900F138ED /* noimage.png */; };
+		09C5ECC92B9EF06900F138ED /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECAD2B9EF06900F138ED /* map_present_background_update.png */; };
+		09C5ECCA2B9EF06900F138ED /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECAE2B9EF06900F138ED /* daum_th_line.png */; };
+		09C5ECCB2B9EF06900F138ED /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECAF2B9EF06900F138ED /* map_pin_shadow.png */; };
+		09C5ECCC2B9EF06900F138ED /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C5ECB02B9EF06900F138ED /* DaumMap.framework */; };
+		09C5ECDB2B9F03C000F138ED /* LocalNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5ECDA2B9F03C000F138ED /* LocalNetworkStub.swift */; };
+		09C5ECDD2B9F059E00F138ED /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 09C5ECDC2B9F059E00F138ED /* networkDummy.json */; };
+		09C5ECDF2B9F062B00F138ED /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5ECDE2B9F062B00F138ED /* Dummy.swift */; };
+		09C5ECE32B9F07B100F138ED /* LocationInformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5ECE22B9F07B100F138ED /* LocationInformationModelTests.swift */; };
+		09C5ECE52B9F0DC800F138ED /* LocationInformationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5ECE42B9F0DC800F138ED /* LocationInformationViewModelTests.swift */; };
+		8CADB0208A4D81C692F40FBF /* Pods_FindCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41703553E60AE163021FFAD /* Pods_FindCVS.framework */; };
+		C27F8F74AFC0358B5AE83A99 /* Pods_FindCVSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A1C4A614F3689CAD656E01 /* Pods_FindCVSTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09C5ECD52B9F034F00F138ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 091281312B9E195B00CF4259 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 091281382B9E195B00CF4259;
+			remoteInfo = FindCVS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		091281392B9E195B00CF4259 /* FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0912813C2B9E195C00CF4259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0912813E2B9E195C00CF4259 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		091281452B9E195E00CF4259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		091281482B9E195E00CF4259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0912814A2B9E195E00CF4259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091281942B9E1C9B00CF4259 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		091281A32B9E1F2600CF4259 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		091281A62B9E1F5200CF4259 /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
+		091281A82B9E203000CF4259 /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
+		091281AA2B9E213500CF4259 /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
+		091281AC2B9E219B00CF4259 /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
+		091281BD2B9E268C00CF4259 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		091281BF2B9E2B6800CF4259 /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
+		091281C12B9E2D2E00CF4259 /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
+		091281C32B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
+		091281C52B9ED36900CF4259 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		091281C82B9ED4FF00CF4259 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		091281CA2B9ED6F500CF4259 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
+		09C5EC7C2B9EEFF700F138ED /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		09C5EC7E2B9EF00000F138ED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		09C5EC802B9EF00B00F138ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		09C5EC822B9EF01300F138ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		09C5EC842B9EF01B00F138ED /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		09C5EC862B9EF02200F138ED /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		09C5EC882B9EF02A00F138ED /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		09C5EC8C2B9EF06900F138ED /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
+		09C5EC8D2B9EF06900F138ED /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
+		09C5EC8E2B9EF06900F138ED /* shadow_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_balloon.png; sourceTree = "<group>"; };
+		09C5EC8F2B9EF06900F138ED /* map_pinup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup.png; sourceTree = "<group>"; };
+		09C5EC902B9EF06900F138ED /* detail_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_button.png; sourceTree = "<group>"; };
+		09C5EC912B9EF06900F138ED /* map_pin_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_custom@3x.png"; sourceTree = "<group>"; };
+		09C5EC922B9EF06900F138ED /* map_pinup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup@3x.png"; sourceTree = "<group>"; };
+		09C5EC932B9EF06900F138ED /* map_pin_shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_shadow@3x.png"; sourceTree = "<group>"; };
+		09C5EC942B9EF06900F138ED /* copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copyright.png; sourceTree = "<group>"; };
+		09C5EC952B9EF06900F138ED /* th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = th_line.png; sourceTree = "<group>"; };
+		09C5EC962B9EF06900F138ED /* map_pin_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_red@3x.png"; sourceTree = "<group>"; };
+		09C5EC972B9EF06900F138ED /* daum_copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_copyright.png; sourceTree = "<group>"; };
+		09C5EC982B9EF06900F138ED /* map_pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin@3x.png"; sourceTree = "<group>"; };
+		09C5EC992B9EF06900F138ED /* map_present_tracking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_tracking.png; sourceTree = "<group>"; };
+		09C5EC9A2B9EF06900F138ED /* map_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_red.png; sourceTree = "<group>"; };
+		09C5EC9C2B9EF06900F138ED /* MTMapPOIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapPOIItem.h; sourceTree = "<group>"; };
+		09C5EC9D2B9EF06900F138ED /* MTMapCameraUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapCameraUpdate.h; sourceTree = "<group>"; };
+		09C5EC9E2B9EF06900F138ED /* MTMapReverseGeoCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapReverseGeoCoder.h; sourceTree = "<group>"; };
+		09C5EC9F2B9EF06900F138ED /* MTMapPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapPolyline.h; sourceTree = "<group>"; };
+		09C5ECA02B9EF06900F138ED /* MTMapLocationMarkerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapLocationMarkerItem.h; sourceTree = "<group>"; };
+		09C5ECA12B9EF06900F138ED /* MTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapView.h; sourceTree = "<group>"; };
+		09C5ECA22B9EF06900F138ED /* MTMapGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapGeometry.h; sourceTree = "<group>"; };
+		09C5ECA32B9EF06900F138ED /* MTMapCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapCircle.h; sourceTree = "<group>"; };
+		09C5ECA42B9EF06900F138ED /* info_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box.png; sourceTree = "<group>"; };
+		09C5ECA52B9EF06900F138ED /* point_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point_sprite.png; sourceTree = "<group>"; };
+		09C5ECA62B9EF06900F138ED /* map_pinup_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup_custom.png; sourceTree = "<group>"; };
+		09C5ECA72B9EF06900F138ED /* info_box_tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box_tail.png; sourceTree = "<group>"; };
+		09C5ECA82B9EF06900F138ED /* noimage256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage256.png; sourceTree = "<group>"; };
+		09C5ECA92B9EF06900F138ED /* map_present_direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_direction.png; sourceTree = "<group>"; };
+		09C5ECAA2B9EF06900F138ED /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
+		09C5ECAB2B9EF06900F138ED /* map_present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present.png; sourceTree = "<group>"; };
+		09C5ECAC2B9EF06900F138ED /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		09C5ECAD2B9EF06900F138ED /* map_present_background_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_background_update.png; sourceTree = "<group>"; };
+		09C5ECAE2B9EF06900F138ED /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
+		09C5ECAF2B9EF06900F138ED /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
+		09C5ECB02B9EF06900F138ED /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		09C5ECD12B9F034E00F138ED /* FindCVSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindCVSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C5ECDA2B9F03C000F138ED /* LocalNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkStub.swift; sourceTree = "<group>"; };
+		09C5ECDC2B9F059E00F138ED /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		09C5ECDE2B9F062B00F138ED /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		09C5ECE22B9F07B100F138ED /* LocationInformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTests.swift; sourceTree = "<group>"; };
+		09C5ECE42B9F0DC800F138ED /* LocationInformationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModelTests.swift; sourceTree = "<group>"; };
+		20A1C4A614F3689CAD656E01 /* Pods_FindCVSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A991AF1492A3B974F62ABD2A /* Pods-FindCVSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVSTests.debug.xcconfig"; path = "Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD6A6790309F14AB3674D18F /* Pods-FindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.release.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.release.xcconfig"; sourceTree = "<group>"; };
+		CECD314D4CD607D06115AA5F /* Pods-FindCVSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVSTests.release.xcconfig"; path = "Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0BCB7DDCFE1C3B2F9259A4D /* Pods-FindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.debug.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.debug.xcconfig"; sourceTree = "<group>"; };
+		F41703553E60AE163021FFAD /* Pods_FindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		091281362B9E195B00CF4259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C5EC892B9EF02A00F138ED /* libsqlite3.tbd in Frameworks */,
+				09C5EC872B9EF02200F138ED /* libxml2.tbd in Frameworks */,
+				09C5EC852B9EF01B00F138ED /* libc++.tbd in Frameworks */,
+				09C5EC832B9EF01300F138ED /* QuartzCore.framework in Frameworks */,
+				09C5EC812B9EF00B00F138ED /* CoreLocation.framework in Frameworks */,
+				09C5EC7F2B9EF00000F138ED /* SystemConfiguration.framework in Frameworks */,
+				09C5EC7D2B9EEFF700F138ED /* OpenGLES.framework in Frameworks */,
+				09C5ECCC2B9EF06900F138ED /* DaumMap.framework in Frameworks */,
+				8CADB0208A4D81C692F40FBF /* Pods_FindCVS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C5ECCE2B9F034E00F138ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27F8F74AFC0358B5AE83A99 /* Pods_FindCVSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		091281302B9E195B00CF4259 = {
+			isa = PBXGroup;
+			children = (
+				0912813B2B9E195B00CF4259 /* FindCVS */,
+				09C5ECD22B9F034F00F138ED /* FindCVSTests */,
+				0912813A2B9E195B00CF4259 /* Products */,
+				14AC01CE6728DDA987D6B62E /* Pods */,
+				56A62779B7DEFB79FA7F6187 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0912813A2B9E195B00CF4259 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				091281392B9E195B00CF4259 /* FindCVS.app */,
+				09C5ECD12B9F034E00F138ED /* FindCVSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0912813B2B9E195B00CF4259 /* FindCVS */ = {
+			isa = PBXGroup;
+			children = (
+				091281942B9E1C9B00CF4259 /* BridgingHeader.h */,
+				0912813C2B9E195C00CF4259 /* AppDelegate.swift */,
+				0912813E2B9E195C00CF4259 /* SceneDelegate.swift */,
+				091281452B9E195E00CF4259 /* Assets.xcassets */,
+				091281472B9E195E00CF4259 /* LaunchScreen.storyboard */,
+				091281C72B9ED38500CF4259 /* Network */,
+				091281BC2B9E246E00CF4259 /* Presentation */,
+				091281A52B9E1F2A00CF4259 /* Entities */,
+				0912814A2B9E195E00CF4259 /* Info.plist */,
+			);
+			path = FindCVS;
+			sourceTree = "<group>";
+		};
+		091281A52B9E1F2A00CF4259 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				091281A32B9E1F2600CF4259 /* LocationData.swift */,
+				091281A62B9E1F5200CF4259 /* KLDocument.swift */,
+				091281A82B9E203000CF4259 /* DetailListCellData.swift */,
+				091281BD2B9E268C00CF4259 /* MTMapViewError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		091281BC2B9E246E00CF4259 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				091281CC2B9ED70000CF4259 /* LocationInformation */,
+				091281BF2B9E2B6800CF4259 /* DetailListCell.swift */,
+				091281C12B9E2D2E00CF4259 /* DetailListBackgroundView.swift */,
+				091281C32B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		091281C72B9ED38500CF4259 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				091281C52B9ED36900CF4259 /* LocalAPI.swift */,
+				091281C82B9ED4FF00CF4259 /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		091281CC2B9ED70000CF4259 /* LocationInformation */ = {
+			isa = PBXGroup;
+			children = (
+				091281AA2B9E213500CF4259 /* LocationInformationViewController.swift */,
+				091281CA2B9ED6F500CF4259 /* LocationInformationModel.swift */,
+				091281AC2B9E219B00CF4259 /* LocationInformationViewModel.swift */,
+			);
+			path = LocationInformation;
+			sourceTree = "<group>";
+		};
+		09C5EC8A2B9EF06900F138ED /* DaumMap.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EC8B2B9EF06900F138ED /* Resources */,
+				09C5ECB02B9EF06900F138ED /* DaumMap.framework */,
+			);
+			path = DaumMap.embeddedframework;
+			sourceTree = "<group>";
+		};
+		09C5EC8B2B9EF06900F138ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EC8C2B9EF06900F138ED /* map_pinup_custom@3x.png */,
+				09C5EC8D2B9EF06900F138ED /* map_pin_custom.png */,
+				09C5EC8E2B9EF06900F138ED /* shadow_balloon.png */,
+				09C5EC8F2B9EF06900F138ED /* map_pinup.png */,
+				09C5EC902B9EF06900F138ED /* detail_button.png */,
+				09C5EC912B9EF06900F138ED /* map_pin_custom@3x.png */,
+				09C5EC922B9EF06900F138ED /* map_pinup@3x.png */,
+				09C5EC932B9EF06900F138ED /* map_pin_shadow@3x.png */,
+				09C5EC942B9EF06900F138ED /* copyright.png */,
+				09C5EC952B9EF06900F138ED /* th_line.png */,
+				09C5EC962B9EF06900F138ED /* map_pin_red@3x.png */,
+				09C5EC972B9EF06900F138ED /* daum_copyright.png */,
+				09C5EC982B9EF06900F138ED /* map_pin@3x.png */,
+				09C5EC992B9EF06900F138ED /* map_present_tracking.png */,
+				09C5EC9A2B9EF06900F138ED /* map_pin_red.png */,
+				09C5EC9B2B9EF06900F138ED /* Headers */,
+				09C5ECA42B9EF06900F138ED /* info_box.png */,
+				09C5ECA52B9EF06900F138ED /* point_sprite.png */,
+				09C5ECA62B9EF06900F138ED /* map_pinup_custom.png */,
+				09C5ECA72B9EF06900F138ED /* info_box_tail.png */,
+				09C5ECA82B9EF06900F138ED /* noimage256.png */,
+				09C5ECA92B9EF06900F138ED /* map_present_direction.png */,
+				09C5ECAA2B9EF06900F138ED /* map_pin.png */,
+				09C5ECAB2B9EF06900F138ED /* map_present.png */,
+				09C5ECAC2B9EF06900F138ED /* noimage.png */,
+				09C5ECAD2B9EF06900F138ED /* map_present_background_update.png */,
+				09C5ECAE2B9EF06900F138ED /* daum_th_line.png */,
+				09C5ECAF2B9EF06900F138ED /* map_pin_shadow.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		09C5EC9B2B9EF06900F138ED /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EC9C2B9EF06900F138ED /* MTMapPOIItem.h */,
+				09C5EC9D2B9EF06900F138ED /* MTMapCameraUpdate.h */,
+				09C5EC9E2B9EF06900F138ED /* MTMapReverseGeoCoder.h */,
+				09C5EC9F2B9EF06900F138ED /* MTMapPolyline.h */,
+				09C5ECA02B9EF06900F138ED /* MTMapLocationMarkerItem.h */,
+				09C5ECA12B9EF06900F138ED /* MTMapView.h */,
+				09C5ECA22B9EF06900F138ED /* MTMapGeometry.h */,
+				09C5ECA32B9EF06900F138ED /* MTMapCircle.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		09C5ECD22B9F034F00F138ED /* FindCVSTests */ = {
+			isa = PBXGroup;
+			children = (
+				09C5ECDC2B9F059E00F138ED /* networkDummy.json */,
+				09C5ECDE2B9F062B00F138ED /* Dummy.swift */,
+				09C5ECDA2B9F03C000F138ED /* LocalNetworkStub.swift */,
+				09C5ECE22B9F07B100F138ED /* LocationInformationModelTests.swift */,
+				09C5ECE42B9F0DC800F138ED /* LocationInformationViewModelTests.swift */,
+			);
+			path = FindCVSTests;
+			sourceTree = "<group>";
+		};
+		14AC01CE6728DDA987D6B62E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0BCB7DDCFE1C3B2F9259A4D /* Pods-FindCVS.debug.xcconfig */,
+				AD6A6790309F14AB3674D18F /* Pods-FindCVS.release.xcconfig */,
+				A991AF1492A3B974F62ABD2A /* Pods-FindCVSTests.debug.xcconfig */,
+				CECD314D4CD607D06115AA5F /* Pods-FindCVSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		56A62779B7DEFB79FA7F6187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EC8A2B9EF06900F138ED /* DaumMap.embeddedframework */,
+				09C5EC882B9EF02A00F138ED /* libsqlite3.tbd */,
+				09C5EC862B9EF02200F138ED /* libxml2.tbd */,
+				09C5EC842B9EF01B00F138ED /* libc++.tbd */,
+				09C5EC822B9EF01300F138ED /* QuartzCore.framework */,
+				09C5EC802B9EF00B00F138ED /* CoreLocation.framework */,
+				09C5EC7E2B9EF00000F138ED /* SystemConfiguration.framework */,
+				09C5EC7C2B9EEFF700F138ED /* OpenGLES.framework */,
+				F41703553E60AE163021FFAD /* Pods_FindCVS.framework */,
+				20A1C4A614F3689CAD656E01 /* Pods_FindCVSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		091281382B9E195B00CF4259 /* FindCVS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0912814D2B9E195E00CF4259 /* Build configuration list for PBXNativeTarget "FindCVS" */;
+			buildPhases = (
+				6E157CA2578C2B6B2F4F25CD /* [CP] Check Pods Manifest.lock */,
+				091281352B9E195B00CF4259 /* Sources */,
+				091281362B9E195B00CF4259 /* Frameworks */,
+				091281372B9E195B00CF4259 /* Resources */,
+				3DED53CF8C4DFBDC0BC448AF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindCVS;
+			productName = FindCVS;
+			productReference = 091281392B9E195B00CF4259 /* FindCVS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09C5ECD02B9F034E00F138ED /* FindCVSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C5ECD72B9F034F00F138ED /* Build configuration list for PBXNativeTarget "FindCVSTests" */;
+			buildPhases = (
+				2060587FDC833DDC9B8779B3 /* [CP] Check Pods Manifest.lock */,
+				09C5ECCD2B9F034E00F138ED /* Sources */,
+				09C5ECCE2B9F034E00F138ED /* Frameworks */,
+				09C5ECCF2B9F034E00F138ED /* Resources */,
+				8ACB00953FF82CBE99C56FCC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09C5ECD62B9F034F00F138ED /* PBXTargetDependency */,
+			);
+			name = FindCVSTests;
+			productName = FindCVSTests;
+			productReference = 09C5ECD12B9F034E00F138ED /* FindCVSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		091281312B9E195B00CF4259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					091281382B9E195B00CF4259 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					09C5ECD02B9F034E00F138ED = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+						TestTargetID = 091281382B9E195B00CF4259;
+					};
+				};
+			};
+			buildConfigurationList = 091281342B9E195B00CF4259 /* Build configuration list for PBXProject "FindCVS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 091281302B9E195B00CF4259;
+			productRefGroup = 0912813A2B9E195B00CF4259 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				091281382B9E195B00CF4259 /* FindCVS */,
+				09C5ECD02B9F034E00F138ED /* FindCVSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		091281372B9E195B00CF4259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C5ECC32B9EF06900F138ED /* info_box_tail.png in Resources */,
+				09C5ECB82B9EF06900F138ED /* map_pin_shadow@3x.png in Resources */,
+				09C5ECC62B9EF06900F138ED /* map_pin.png in Resources */,
+				09C5ECBF2B9EF06900F138ED /* map_pin_red.png in Resources */,
+				09C5ECB72B9EF06900F138ED /* map_pinup@3x.png in Resources */,
+				09C5ECC12B9EF06900F138ED /* point_sprite.png in Resources */,
+				09C5ECBD2B9EF06900F138ED /* map_pin@3x.png in Resources */,
+				09C5ECC42B9EF06900F138ED /* noimage256.png in Resources */,
+				09C5ECC72B9EF06900F138ED /* map_present.png in Resources */,
+				09C5ECBC2B9EF06900F138ED /* daum_copyright.png in Resources */,
+				09C5ECB92B9EF06900F138ED /* copyright.png in Resources */,
+				09C5ECB32B9EF06900F138ED /* shadow_balloon.png in Resources */,
+				09C5ECB62B9EF06900F138ED /* map_pin_custom@3x.png in Resources */,
+				09C5ECBA2B9EF06900F138ED /* th_line.png in Resources */,
+				09C5ECC22B9EF06900F138ED /* map_pinup_custom.png in Resources */,
+				091281492B9E195E00CF4259 /* LaunchScreen.storyboard in Resources */,
+				09C5ECCA2B9EF06900F138ED /* daum_th_line.png in Resources */,
+				09C5ECB12B9EF06900F138ED /* map_pinup_custom@3x.png in Resources */,
+				091281462B9E195E00CF4259 /* Assets.xcassets in Resources */,
+				09C5ECBE2B9EF06900F138ED /* map_present_tracking.png in Resources */,
+				09C5ECCB2B9EF06900F138ED /* map_pin_shadow.png in Resources */,
+				09C5ECC52B9EF06900F138ED /* map_present_direction.png in Resources */,
+				09C5ECC92B9EF06900F138ED /* map_present_background_update.png in Resources */,
+				09C5ECB52B9EF06900F138ED /* detail_button.png in Resources */,
+				09C5ECBB2B9EF06900F138ED /* map_pin_red@3x.png in Resources */,
+				09C5ECC82B9EF06900F138ED /* noimage.png in Resources */,
+				09C5ECC02B9EF06900F138ED /* info_box.png in Resources */,
+				09C5ECB22B9EF06900F138ED /* map_pin_custom.png in Resources */,
+				09C5ECB42B9EF06900F138ED /* map_pinup.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C5ECCF2B9F034E00F138ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C5ECDD2B9F059E00F138ED /* networkDummy.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2060587FDC833DDC9B8779B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DED53CF8C4DFBDC0BC448AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E157CA2578C2B6B2F4F25CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ACB00953FF82CBE99C56FCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091281352B9E195B00CF4259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091281C92B9ED4FF00CF4259 /* LocalNetwork.swift in Sources */,
+				091281A42B9E1F2600CF4259 /* LocationData.swift in Sources */,
+				091281C22B9E2D2E00CF4259 /* DetailListBackgroundView.swift in Sources */,
+				091281C42B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift in Sources */,
+				091281A72B9E1F5200CF4259 /* KLDocument.swift in Sources */,
+				091281AB2B9E213500CF4259 /* LocationInformationViewController.swift in Sources */,
+				091281BE2B9E268C00CF4259 /* MTMapViewError.swift in Sources */,
+				091281C62B9ED36900CF4259 /* LocalAPI.swift in Sources */,
+				0912813D2B9E195C00CF4259 /* AppDelegate.swift in Sources */,
+				091281A92B9E203000CF4259 /* DetailListCellData.swift in Sources */,
+				091281CB2B9ED6F500CF4259 /* LocationInformationModel.swift in Sources */,
+				0912813F2B9E195C00CF4259 /* SceneDelegate.swift in Sources */,
+				091281AD2B9E219B00CF4259 /* LocationInformationViewModel.swift in Sources */,
+				091281C02B9E2B6800CF4259 /* DetailListCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C5ECCD2B9F034E00F138ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C5ECE52B9F0DC800F138ED /* LocationInformationViewModelTests.swift in Sources */,
+				09C5ECDF2B9F062B00F138ED /* Dummy.swift in Sources */,
+				09C5ECDB2B9F03C000F138ED /* LocalNetworkStub.swift in Sources */,
+				09C5ECE32B9F07B100F138ED /* LocationInformationModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09C5ECD62B9F034F00F138ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 091281382B9E195B00CF4259 /* FindCVS */;
+			targetProxy = 09C5ECD52B9F034F00F138ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		091281472B9E195E00CF4259 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091281482B9E195E00CF4259 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0912814B2B9E195E00CF4259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0912814C2B9E195E00CF4259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0912814E2B9E195E00CF4259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0BCB7DDCFE1C3B2F9259A4D /* Pods-FindCVS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47453KXQGG;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindCVS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mijisuh.FindCVS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/suhmzii/Desktop/study/패캠/iOS/FindCVS/FindCVS/BridgingHeader.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0912814F2B9E195E00CF4259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6A6790309F14AB3674D18F /* Pods-FindCVS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47453KXQGG;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindCVS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mijisuh.FindCVS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/suhmzii/Desktop/study/패캠/iOS/FindCVS/FindCVS/BridgingHeader.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		09C5ECD82B9F034F00F138ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A991AF1492A3B974F62ABD2A /* Pods-FindCVSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47453KXQGG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mijisuh.FindCVSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindCVS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindCVS";
+			};
+			name = Debug;
+		};
+		09C5ECD92B9F034F00F138ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CECD314D4CD607D06115AA5F /* Pods-FindCVSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47453KXQGG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mijisuh.FindCVSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindCVS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindCVS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		091281342B9E195B00CF4259 /* Build configuration list for PBXProject "FindCVS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0912814B2B9E195E00CF4259 /* Debug */,
+				0912814C2B9E195E00CF4259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0912814D2B9E195E00CF4259 /* Build configuration list for PBXNativeTarget "FindCVS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0912814E2B9E195E00CF4259 /* Debug */,
+				0912814F2B9E195E00CF4259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09C5ECD72B9F034F00F138ED /* Build configuration list for PBXNativeTarget "FindCVSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C5ECD82B9F034F00F138ED /* Debug */,
+				09C5ECD92B9F034F00F138ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 091281312B9E195B00CF4259 /* Project object */;
+}
