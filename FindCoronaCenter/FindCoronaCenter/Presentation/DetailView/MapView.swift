@@ -46,18 +46,6 @@ struct MapView: View {
         }
     }
     
-    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
-        region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        )
-    }
-    
-    private func setAnnotationItems(_ coordinate: CLLocationCoordinate2D) {
-        annotationItems = [AnnotationItem(coordinate: coordinate)]
-        print(coordinate)
-    }
-    
 }
 
 struct MapView_Previews: PreviewProvider {
