@@ -35,7 +35,7 @@
 | [다음 블로그 검색 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/SearchDaumBlog) | UIKit, SnapKit | RxSwift, RxCocoa, UITableView, UISearchBar, UIAlerController |
 | [당근마켓 스타일 중고 거래 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/UsedGoodsUpload) | UIKit, SnapKit | RxSwift, RxCocoa, MVVM, UITableView |
 
-### 🏇 Upper Intermediate
+### 🏇 Advanced
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
 | --- | --- | --- |
 | [내 근처 편의점 찾기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/FindCVS) | UIKit, SnapKit | RxSwift, RxCocoa, MVVM, CLLocationManager, Kakao Maps API, XcTest, RxTest, Nimble |
