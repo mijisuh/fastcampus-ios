@@ -240,7 +240,7 @@
             ```
             
     - 테스트 내용 정의
-        - XCTestCase를 상속 받음
+        - `XCTestCase`를 상속 받음
         - Nimble 활용해서 Assert 문 작성
             
             ```swift
