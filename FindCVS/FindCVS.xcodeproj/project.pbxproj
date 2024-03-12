@@ -233,9 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				091281CC2B9ED70000CF4259 /* LocationInformation */,
-				091281BF2B9E2B6800CF4259 /* DetailListCell.swift */,
-				091281C12B9E2D2E00CF4259 /* DetailListBackgroundView.swift */,
-				091281C32B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift */,
+				094C5E292B9FD8970060B8DB /* DetailList */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -257,6 +255,16 @@
 				091281AC2B9E219B00CF4259 /* LocationInformationViewModel.swift */,
 			);
 			path = LocationInformation;
+			sourceTree = "<group>";
+		};
+		094C5E292B9FD8970060B8DB /* DetailList */ = {
+			isa = PBXGroup;
+			children = (
+				091281BF2B9E2B6800CF4259 /* DetailListCell.swift */,
+				091281C12B9E2D2E00CF4259 /* DetailListBackgroundView.swift */,
+				091281C32B9E2D3B00CF4259 /* DetailListBackgroundViewModel.swift */,
+			);
+			path = DetailList;
 			sourceTree = "<group>";
 		};
 		09C5EC8A2B9EF06900F138ED /* DaumMap.embeddedframework */ = {
