@@ -15,10 +15,10 @@ enum Language: String, CaseIterable, Codable { // enum에서 Codable을 사용�
     
     var title: String { // 사용자에게 보여질 것
         switch self {
-        case .ko: return "한국어"
-        case .en: return "영어"
-        case .jp: return "일본어"
-        case .cn: return "중국어"
+        case .ko: return NSLocalizedString("Korean", comment: "한국어")
+        case .en: return NSLocalizedString("English", comment: "영어")
+        case .jp: return NSLocalizedString("Japanese", comment: "일본어")
+        case .cn: return NSLocalizedString("Chinese", comment: "중국어")
         }
     }
     

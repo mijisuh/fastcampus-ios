@@ -13,7 +13,7 @@ protocol SourceTextViewControllerDelegate: AnyObject {
 }
 
 final class SourceTextViewController: UIViewController {
-    private let placeHolderText = "텍스트 입력"
+    private let placeHolderText = NSLocalizedString("Enter_text", comment: "텍스트 입력")
     
     private weak var delegate: SourceTextViewControllerDelegate? // TranslateViewController와도 연결되어 있으므로 메모리 누수 위험 있음
     

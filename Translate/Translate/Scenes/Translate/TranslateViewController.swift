@@ -87,7 +87,7 @@ final class TranslateViewController: UIViewController {
         label.font = .systemFont(ofSize: 23, weight: .semibold)
         // sourceLabel에 입력값이 추가되면, placeHolder 스타일 해지
         label.textColor = .tertiaryLabel
-        label.text = "텍스트 입력"
+        label.text = NSLocalizedString("Enter_text", comment: "텍스트 입력")
         label.numberOfLines = 0
         return label
     }()
@@ -207,7 +207,7 @@ private extension TranslateViewController {
             }
             alertController.addAction(action)
         }
-        let cancelAction = UIAlertAction(title: "취소하기", style: .cancel)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "취소하기"), style: .cancel)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
     }

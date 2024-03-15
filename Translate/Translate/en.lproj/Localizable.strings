@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Translate
+
+  Created by mijisuh on 2024/03/15.
+  
+*/
+
+// TabBar Title
+"Translate" = "Translate";
+"Bookmark" = "Bookmark"; // Navigation Titel
+
+// Language Model
+"Korean" = "Korean";
+"English" = "English";
+"Japanese" = "Japanese";
+"Chinese" = "Chinese";
+
+// Action Sheet
+"Cancel" = "Cancel";
+
+// Placeholder
+"Enter_text" = "Enter text";

@@ -60,7 +60,7 @@ extension BookmarkListViewController: UICollectionViewDataSource {
 
 private extension BookmarkListViewController {
     func setupLayout() {
-        navigationItem.title = "즐겨찾기"
+        navigationItem.title = NSLocalizedString("Bookmark", comment: "즐겨찾기")
         navigationController?.navigationBar.prefersLargeTitles = true // 무조건 largeTitle로 설정
         
         view.addSubview(collectionView)
