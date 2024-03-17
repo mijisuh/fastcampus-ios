@@ -88,9 +88,9 @@
 			children = (
 				096705A22BA2C36D00BD05B8 /* AppDelegate.swift */,
 				096705A42BA2C36D00BD05B8 /* SceneDelegate.swift */,
-				0989B0612BA3202F00AC73D5 /* Managers */,
-				096705D32BA2EF1F00BD05B8 /* Models */,
 				096705CA2BA2E2D800BD05B8 /* Extension */,
+				096705D32BA2EF1F00BD05B8 /* Models */,
+				0989B0612BA3202F00AC73D5 /* Managers */,
 				096705BC2BA2C7CA00BD05B8 /* Scenes */,
 				096705AB2BA2C36F00BD05B8 /* Assets.xcassets */,
 				096705AD2BA2C36F00BD05B8 /* LaunchScreen.storyboard */,
