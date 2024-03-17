@@ -14,6 +14,7 @@ final class ReviewListViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = presenter
+        tableView.rowHeight = 100.0
         return tableView
     }()
     
@@ -21,6 +22,12 @@ final class ReviewListViewController: UIViewController {
         super.viewDidLoad()
         
         presenter.viewDidLoad() // View가 Presenter에게 View가 보여질 것임으로 알림
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.viewWillAppear()
     }
 }
 
@@ -32,7 +39,7 @@ extension ReviewListViewController: ReviewListProtocol {
         let rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
-            action: nil
+            action: #selector(didTapRightBarButtonItem)
         )
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
@@ -43,5 +50,20 @@ extension ReviewListViewController: ReviewListProtocol {
             $0.edges.equalToSuperview()
         }
     }
+    
+    func presentToReviewWriteViewController() {
+        let viewController = UINavigationController(rootViewController: ReviewWriteViewController())
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true)
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
+    }
 }
  
+private extension ReviewListViewController {
+    @objc func didTapRightBarButtonItem() {
+        presenter.didTapRightBarButtonItem()
+    }
+}

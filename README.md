@@ -38,7 +38,8 @@
 ### 🏇 Advanced
 | 프로젝트 | 구현 방식 | 주요 활용 기술 |
 | --- | --- | --- |
-| [내 근처 편의점 찾기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/FindCVS) | UIKit, SnapKit | RxSwift, RxCocoa, MVVM, CLLocationManager, Kakao Maps API, XcTest, RxTest, Nimble |
+| [내 근처 편의점 찾기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/FindCVS) | UIKit, SnapKit | RxSwift, RxCocoa, MVVM, CLLocationManager, Kakao Maps API, XCTest, RxTest, Nimble |
 | [코로나19 예방접종 센터 조회 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/FindCoronaCenter) | SwiftUI | Combine, MVVM, 공공 데이터 포털 API, MapKit |
 | [별다방 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Cafe) | SwiftUI | TabView, LazyHStack, List, NavigationView, Combine |
 | [번역기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Translate) | UIKit, SnapKit | Localization, Google Cloud Translation API |
+| [도서 리뷰 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/BookReview) | UIKit, SnapKit | MVP, XCTest, Naver API |

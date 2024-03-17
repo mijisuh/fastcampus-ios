@@ -12,13 +12,27 @@
 		0989B07A2BA71A0300AC73D5 /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0792BA71A0300AC73D5 /* ReviewListViewController.swift */; };
 		0989B07F2BA71A0600AC73D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0989B07E2BA71A0600AC73D5 /* Assets.xcassets */; };
 		0989B0822BA71A0600AC73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0989B0802BA71A0600AC73D5 /* LaunchScreen.storyboard */; };
-		0989B08D2BA71A0700AC73D5 /* BookReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B08C2BA71A0700AC73D5 /* BookReviewTests.swift */; };
+		0989B08D2BA71A0700AC73D5 /* ReviewListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B08C2BA71A0700AC73D5 /* ReviewListPresenterTests.swift */; };
 		0989B0972BA71A0700AC73D5 /* BookReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0962BA71A0700AC73D5 /* BookReviewUITests.swift */; };
 		0989B0992BA71A0700AC73D5 /* BookReviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0982BA71A0700AC73D5 /* BookReviewUITestsLaunchTests.swift */; };
 		0989B0A72BA71A2E00AC73D5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0989B0A62BA71A2E00AC73D5 /* SnapKit */; };
 		0989B0AA2BA71A3E00AC73D5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0989B0A92BA71A3E00AC73D5 /* Alamofire */; };
 		0989B0AD2BA71A4F00AC73D5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0989B0AC2BA71A4F00AC73D5 /* Kingfisher */; };
 		0989B0AF2BA71BBB00AC73D5 /* ReviewListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0AE2BA71BBB00AC73D5 /* ReviewListPresenter.swift */; };
+		0989B0B32BA725F100AC73D5 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0B22BA725F000AC73D5 /* ReviewWriteViewController.swift */; };
+		0989B0B52BA7260E00AC73D5 /* ReviewWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0B42BA7260E00AC73D5 /* ReviewWritePresenter.swift */; };
+		0989B0B82BA72FD800AC73D5 /* SearchBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0B72BA72FD800AC73D5 /* SearchBookViewController.swift */; };
+		0989B0BA2BA72FEA00AC73D5 /* SearchBookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0B92BA72FEA00AC73D5 /* SearchBookPresenter.swift */; };
+		0989B0BD2BA7371300AC73D5 /* BookSearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0BC2BA7371300AC73D5 /* BookSearchRequestModel.swift */; };
+		0989B0C02BA737B600AC73D5 /* BookSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0BF2BA737B600AC73D5 /* BookSearchResponseModel.swift */; };
+		0989B0C22BA73ABB00AC73D5 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0C12BA73ABA00AC73D5 /* Book.swift */; };
+		0989B0C42BA73B0E00AC73D5 /* BookSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0C32BA73B0E00AC73D5 /* BookSearchManager.swift */; };
+		0989B0C82BA745B400AC73D5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0C72BA745B300AC73D5 /* UserDefaultsManager.swift */; };
+		0989B0CA2BA745BC00AC73D5 /* BookReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989B0C92BA745BC00AC73D5 /* BookReview.swift */; };
+		09E9A11D2BA7556200071F6D /* MockReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A11C2BA7556200071F6D /* MockReviewListViewController.swift */; };
+		09E9A11F2BA7558600071F6D /* MockUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A11E2BA7558600071F6D /* MockUserDefaultsManager.swift */; };
+		09E9A1232BA7569300071F6D /* ReviewWritePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1222BA7569300071F6D /* ReviewWritePresenterTests.swift */; };
+		09E9A1252BA75C8C00071F6D /* MockReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1242BA75C8C00071F6D /* MockReviewWriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +61,27 @@
 		0989B0812BA71A0600AC73D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0989B0832BA71A0600AC73D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0989B0882BA71A0700AC73D5 /* BookReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0989B08C2BA71A0700AC73D5 /* BookReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewTests.swift; sourceTree = "<group>"; };
+		0989B08C2BA71A0700AC73D5 /* ReviewListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenterTests.swift; sourceTree = "<group>"; };
 		0989B0922BA71A0700AC73D5 /* BookReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0989B0962BA71A0700AC73D5 /* BookReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewUITests.swift; sourceTree = "<group>"; };
 		0989B0982BA71A0700AC73D5 /* BookReviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0989B0AE2BA71BBB00AC73D5 /* ReviewListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenter.swift; sourceTree = "<group>"; };
+		0989B0B22BA725F000AC73D5 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
+		0989B0B42BA7260E00AC73D5 /* ReviewWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenter.swift; sourceTree = "<group>"; };
+		0989B0B72BA72FD800AC73D5 /* SearchBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookViewController.swift; sourceTree = "<group>"; };
+		0989B0B92BA72FEA00AC73D5 /* SearchBookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookPresenter.swift; sourceTree = "<group>"; };
+		0989B0BC2BA7371300AC73D5 /* BookSearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequestModel.swift; sourceTree = "<group>"; };
+		0989B0BF2BA737B600AC73D5 /* BookSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchResponseModel.swift; sourceTree = "<group>"; };
+		0989B0C12BA73ABA00AC73D5 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		0989B0C32BA73B0E00AC73D5 /* BookSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchManager.swift; sourceTree = "<group>"; };
+		0989B0C52BA73BBD00AC73D5 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		0989B0C72BA745B300AC73D5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		0989B0C92BA745BC00AC73D5 /* BookReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReview.swift; sourceTree = "<group>"; };
+		09E9A11C2BA7556200071F6D /* MockReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReviewListViewController.swift; sourceTree = "<group>"; };
+		09E9A11E2BA7558600071F6D /* MockUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsManager.swift; sourceTree = "<group>"; };
+		09E9A1222BA7569300071F6D /* ReviewWritePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenterTests.swift; sourceTree = "<group>"; };
+		09E9A1242BA75C8C00071F6D /* MockReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReviewWriteViewController.swift; sourceTree = "<group>"; };
+		09E9A1262BA7621F00071F6D /* BookReview.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookReview.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +115,8 @@
 		0989B0692BA71A0300AC73D5 = {
 			isa = PBXGroup;
 			children = (
+				09E9A1262BA7621F00071F6D /* BookReview.xctestplan */,
+				0989B0C52BA73BBD00AC73D5 /* Secrets.xcconfig */,
 				0989B0742BA71A0300AC73D5 /* BookReview */,
 				0989B08B2BA71A0700AC73D5 /* BookReviewTests */,
 				0989B0952BA71A0700AC73D5 /* BookReviewUITests */,
@@ -107,6 +139,8 @@
 			children = (
 				0989B0752BA71A0300AC73D5 /* AppDelegate.swift */,
 				0989B0772BA71A0300AC73D5 /* SceneDelegate.swift */,
+				0989B0C62BA7459100AC73D5 /* Manager */,
+				0989B0BE2BA7371A00AC73D5 /* Models */,
 				0989B0B12BA71BD200AC73D5 /* Scene */,
 				0989B07E2BA71A0600AC73D5 /* Assets.xcassets */,
 				0989B0802BA71A0600AC73D5 /* LaunchScreen.storyboard */,
@@ -118,7 +152,8 @@
 		0989B08B2BA71A0700AC73D5 /* BookReviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				0989B08C2BA71A0700AC73D5 /* BookReviewTests.swift */,
+				09E9A1202BA755AF00071F6D /* Mock */,
+				09E9A1212BA755BF00071F6D /* Tests */,
 			);
 			path = BookReviewTests;
 			sourceTree = "<group>";
@@ -145,8 +180,67 @@
 			isa = PBXGroup;
 			children = (
 				0989B0B02BA71BC500AC73D5 /* ReviewList */,
+				0989B0B62BA7261500AC73D5 /* ReviewWrite */,
+				0989B0BB2BA7300E00AC73D5 /* SearchBook */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		0989B0B62BA7261500AC73D5 /* ReviewWrite */ = {
+			isa = PBXGroup;
+			children = (
+				0989B0B22BA725F000AC73D5 /* ReviewWriteViewController.swift */,
+				0989B0B42BA7260E00AC73D5 /* ReviewWritePresenter.swift */,
+			);
+			path = ReviewWrite;
+			sourceTree = "<group>";
+		};
+		0989B0BB2BA7300E00AC73D5 /* SearchBook */ = {
+			isa = PBXGroup;
+			children = (
+				0989B0B72BA72FD800AC73D5 /* SearchBookViewController.swift */,
+				0989B0B92BA72FEA00AC73D5 /* SearchBookPresenter.swift */,
+			);
+			path = SearchBook;
+			sourceTree = "<group>";
+		};
+		0989B0BE2BA7371A00AC73D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0989B0C12BA73ABA00AC73D5 /* Book.swift */,
+				0989B0BC2BA7371300AC73D5 /* BookSearchRequestModel.swift */,
+				0989B0BF2BA737B600AC73D5 /* BookSearchResponseModel.swift */,
+				0989B0C92BA745BC00AC73D5 /* BookReview.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0989B0C62BA7459100AC73D5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0989B0C32BA73B0E00AC73D5 /* BookSearchManager.swift */,
+				0989B0C72BA745B300AC73D5 /* UserDefaultsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		09E9A1202BA755AF00071F6D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				09E9A11C2BA7556200071F6D /* MockReviewListViewController.swift */,
+				09E9A1242BA75C8C00071F6D /* MockReviewWriteViewController.swift */,
+				09E9A11E2BA7558600071F6D /* MockUserDefaultsManager.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		09E9A1212BA755BF00071F6D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0989B08C2BA71A0700AC73D5 /* ReviewListPresenterTests.swift */,
+				09E9A1222BA7569300071F6D /* ReviewWritePresenterTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +383,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0989B0B52BA7260E00AC73D5 /* ReviewWritePresenter.swift in Sources */,
 				0989B07A2BA71A0300AC73D5 /* ReviewListViewController.swift in Sources */,
+				0989B0BD2BA7371300AC73D5 /* BookSearchRequestModel.swift in Sources */,
+				0989B0C82BA745B400AC73D5 /* UserDefaultsManager.swift in Sources */,
+				0989B0CA2BA745BC00AC73D5 /* BookReview.swift in Sources */,
+				0989B0C22BA73ABB00AC73D5 /* Book.swift in Sources */,
 				0989B0762BA71A0300AC73D5 /* AppDelegate.swift in Sources */,
+				0989B0B82BA72FD800AC73D5 /* SearchBookViewController.swift in Sources */,
+				0989B0C02BA737B600AC73D5 /* BookSearchResponseModel.swift in Sources */,
+				0989B0B32BA725F100AC73D5 /* ReviewWriteViewController.swift in Sources */,
+				0989B0BA2BA72FEA00AC73D5 /* SearchBookPresenter.swift in Sources */,
 				0989B0AF2BA71BBB00AC73D5 /* ReviewListPresenter.swift in Sources */,
+				0989B0C42BA73B0E00AC73D5 /* BookSearchManager.swift in Sources */,
 				0989B0782BA71A0300AC73D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0989B08D2BA71A0700AC73D5 /* BookReviewTests.swift in Sources */,
+				09E9A1252BA75C8C00071F6D /* MockReviewWriteViewController.swift in Sources */,
+				09E9A11D2BA7556200071F6D /* MockReviewListViewController.swift in Sources */,
+				0989B08D2BA71A0700AC73D5 /* ReviewListPresenterTests.swift in Sources */,
+				09E9A1232BA7569300071F6D /* ReviewWritePresenterTests.swift in Sources */,
+				09E9A11F2BA7558600071F6D /* MockUserDefaultsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +564,7 @@
 		};
 		0989B09D2BA71A0700AC73D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0989B0C52BA73BBD00AC73D5 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "DEA08B74-E122-449F-9E7E-4B30B1E7F9F4",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BookReview.xcodeproj",
+      "identifier" : "0989B0712BA71A0300AC73D5",
+      "name" : "BookReview"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BookReview.xcodeproj",
+        "identifier" : "0989B0872BA71A0700AC73D5",
+        "name" : "BookReviewTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BookReview.xcodeproj",
+        "identifier" : "0989B0912BA71A0700AC73D5",
+        "name" : "BookReviewUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
