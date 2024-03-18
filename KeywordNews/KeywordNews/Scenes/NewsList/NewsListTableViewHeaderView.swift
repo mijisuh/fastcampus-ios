@@ -102,6 +102,6 @@ private extension NewsListTableViewHeaderView {
             tagCollectionView.addTag(tag)
         }
         
-        tagCollectionView.reload()
+        tagCollectionView.reload() // 반드시 해줘야 함
     }
 }
