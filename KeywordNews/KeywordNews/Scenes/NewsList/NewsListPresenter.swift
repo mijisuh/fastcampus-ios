@@ -26,7 +26,7 @@ final class NewsListPresenter: NSObject {
     }
     
     func didCalledRefresh() {
-        viewController?.endRefreshing()
+        viewController?.endRefreshing() 
     }
 }
 
