@@ -30,15 +30,15 @@ final class NewsListTableViewCell: UITableViewCell {
         return label
     }()
     
-    func setup() {
+    func setup(news: News) {
         setupLayout()
         
         selectionStyle = .none
         accessoryType = .disclosureIndicator // 이동
         
-        titleLabel.text = "기사제목"
-        descriptionLabel.text = "기사내용"
-        dateLable.text = "2024.03.18"
+        titleLabel.text = news.title.htmlToString
+        descriptionLabel.text = news.description.htmlToString
+        dateLable.text = news.pubDate
     }
 }
 

@@ -9,14 +9,25 @@ import UIKit
 import SnapKit
 import TTGTags
 
+protocol NewsListTableViewHeaderViewProtocol: AnyObject {
+    func didSelectTag(_ selectedIndex: Int)
+}
+
 final class NewsListTableViewHeaderView: UITableViewHeaderFooterView {
     static let identifier = "NewsListTableViewHeaderView"
     
-    private var tags: [String] = ["IT", "아이폰", "개발자", "개발", "판교", "게임", "앱개발", "강남", "스타트업"]
+    private weak var delegate: NewsListTableViewHeaderViewProtocol?
+    
+    private var tags: [String] = []
 
     private lazy var tagCollectionView = TTGTextTagCollectionView()
     
-    func setup() {
+    func setup(tags: [String], delegate: NewsListTableViewHeaderViewProtocol) {
+        guard tagCollectionView.allTags().isEmpty else { return } // 이미 태그가 추가되어 있으면 return
+        
+        self.tags = tags
+        self.delegate = delegate
+        
         contentView.backgroundColor = .systemBackground
         
         setupTagCollectionViewLayout()
@@ -31,9 +42,12 @@ extension NewsListTableViewHeaderView: TTGTextTagCollectionViewDelegate {
         at index: UInt
     ) {
         guard tag.selected else { return }
+        
         textTagCollectionView.allSelectedTags().forEach { $0.selected = false } // 선택한 태그 이외의 태그 선택 해제
         textTagCollectionView.updateTag(at: index, selected: true)
         textTagCollectionView.reload()
+
+        delegate?.didSelectTag(Int(index))
     }
 }
 
