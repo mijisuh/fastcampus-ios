@@ -57,5 +57,39 @@ final class MovieReviewUITests: XCTestCase {
     func test_test() {
         // 녹화 버튼을 누르면 테스트가 자동으로 작성됨
         // 현업에서 잘 사용되지 않지만 작성 방법에 대해 알 수 있음
+        
+        let app = XCUIApplication()
+        app.navigationBars["겨울왕국 2"].buttons["영화 평점"].tap()
+        app.collectionViews.cells.containing(.staticText, identifier:" 듄").element.tap()
+
+                
+    }
+    
+    // BDD
+    enum CellData: String {
+        case existsMovie = " 듄"
+        case notExistsMovie = " 007"
+    }
+    
+    func test_영화가_즐겨찾기_되어있으면() {
+        let existCell = app
+            .collectionViews
+            .cells
+            .containing(.staticText, identifier: CellData.existsMovie.rawValue)
+            .element
+            .exists
+        
+        XCTAssertTrue(existCell, "title이 표시된 cell이 존재한다.")
+    }
+    
+    func test_영화가_즐겨찾기_되어있지_않으면() {
+        let existCell = app
+            .collectionViews
+            .cells
+            .containing(.staticText, identifier: CellData.notExistsMovie.rawValue)
+            .element
+            .exists
+        
+        XCTAssertFalse(existCell, "title이 표시된 cell이 존재하지 않는다.")
     }
 }

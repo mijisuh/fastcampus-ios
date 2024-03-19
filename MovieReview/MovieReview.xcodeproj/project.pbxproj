@@ -14,12 +14,17 @@
 		09DA30332BA986AF006864C4 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30322BA986AF006864C4 /* MovieDetailPresenter.swift */; };
 		09DA30362BA98DB4006864C4 /* MovieContentsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30352BA98DB4006864C4 /* MovieContentsStackView.swift */; };
 		09DA30382BA996F0006864C4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30372BA996F0006864C4 /* UserDefaultsManager.swift */; };
+		09DA303A2BA9AD68006864C4 /* MovieListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30392BA9AD68006864C4 /* MovieListPresenterTests.swift */; };
+		09DA303D2BA9AFBE006864C4 /* MockMovieSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA303C2BA9AFBE006864C4 /* MockMovieSearchManager.swift */; };
+		09DA303F2BA9AFCC006864C4 /* MockMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA303E2BA9AFCC006864C4 /* MockMovieListViewController.swift */; };
+		09DA30412BA9AFDB006864C4 /* MockUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30402BA9AFDB006864C4 /* MockUserDefaultsManager.swift */; };
+		09DA30442BA9B430006864C4 /* MovieDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30432BA9B430006864C4 /* MovieDetailPresenterTests.swift */; };
+		09DA30462BA9B4A6006864C4 /* MockMovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA30452BA9B4A6006864C4 /* MockMovieDetailViewController.swift */; };
 		09E9A1342BA8287D00071F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1332BA8287D00071F6D /* AppDelegate.swift */; };
 		09E9A1362BA8287D00071F6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1352BA8287D00071F6D /* SceneDelegate.swift */; };
 		09E9A1382BA8287D00071F6D /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1372BA8287D00071F6D /* MovieListViewController.swift */; };
 		09E9A13D2BA8288100071F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E9A13C2BA8288100071F6D /* Assets.xcassets */; };
 		09E9A1402BA8288100071F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E9A13E2BA8288100071F6D /* LaunchScreen.storyboard */; };
-		09E9A14B2BA8288100071F6D /* MovieReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A14A2BA8288100071F6D /* MovieReviewTests.swift */; };
 		09E9A1552BA8288100071F6D /* MovieReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1542BA8288100071F6D /* MovieReviewUITests.swift */; };
 		09E9A1572BA8288100071F6D /* MovieReviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9A1562BA8288100071F6D /* MovieReviewUITestsLaunchTests.swift */; };
 		09E9A1652BA8289D00071F6D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 09E9A1642BA8289D00071F6D /* SnapKit */; };
@@ -59,6 +64,12 @@
 		09DA30322BA986AF006864C4 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		09DA30352BA98DB4006864C4 /* MovieContentsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentsStackView.swift; sourceTree = "<group>"; };
 		09DA30372BA996F0006864C4 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		09DA30392BA9AD68006864C4 /* MovieListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenterTests.swift; sourceTree = "<group>"; };
+		09DA303C2BA9AFBE006864C4 /* MockMovieSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieSearchManager.swift; sourceTree = "<group>"; };
+		09DA303E2BA9AFCC006864C4 /* MockMovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieListViewController.swift; sourceTree = "<group>"; };
+		09DA30402BA9AFDB006864C4 /* MockUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsManager.swift; sourceTree = "<group>"; };
+		09DA30432BA9B430006864C4 /* MovieDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenterTests.swift; sourceTree = "<group>"; };
+		09DA30452BA9B4A6006864C4 /* MockMovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieDetailViewController.swift; sourceTree = "<group>"; };
 		09E9A1302BA8287D00071F6D /* MovieReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E9A1332BA8287D00071F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E9A1352BA8287D00071F6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +78,6 @@
 		09E9A13F2BA8288100071F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E9A1412BA8288100071F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E9A1462BA8288100071F6D /* MovieReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E9A14A2BA8288100071F6D /* MovieReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewTests.swift; sourceTree = "<group>"; };
 		09E9A1502BA8288100071F6D /* MovieReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E9A1542BA8288100071F6D /* MovieReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewUITests.swift; sourceTree = "<group>"; };
 		09E9A1562BA8288100071F6D /* MovieReviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -138,6 +148,26 @@
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
+		09DA303B2BA9AD75006864C4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				09DA30392BA9AD68006864C4 /* MovieListPresenterTests.swift */,
+				09DA30432BA9B430006864C4 /* MovieDetailPresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		09DA30422BA9B030006864C4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				09DA303E2BA9AFCC006864C4 /* MockMovieListViewController.swift */,
+				09DA303C2BA9AFBE006864C4 /* MockMovieSearchManager.swift */,
+				09DA30402BA9AFDB006864C4 /* MockUserDefaultsManager.swift */,
+				09DA30452BA9B4A6006864C4 /* MockMovieDetailViewController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		09E9A1272BA8287D00071F6D = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +210,8 @@
 		09E9A1492BA8288100071F6D /* MovieReviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				09E9A14A2BA8288100071F6D /* MovieReviewTests.swift */,
+				09DA303B2BA9AD75006864C4 /* Tests */,
+				09DA30422BA9B030006864C4 /* Mocks */,
 			);
 			path = MovieReviewTests;
 			sourceTree = "<group>";
@@ -325,6 +356,7 @@
 					};
 					09E9A1452BA8288100071F6D = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 						TestTargetID = 09E9A12F2BA8287D00071F6D;
 					};
 					09E9A14F2BA8288100071F6D = {
@@ -497,7 +529,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E9A14B2BA8288100071F6D /* MovieReviewTests.swift in Sources */,
+				09DA30412BA9AFDB006864C4 /* MockUserDefaultsManager.swift in Sources */,
+				09DA303F2BA9AFCC006864C4 /* MockMovieListViewController.swift in Sources */,
+				09DA30462BA9B4A6006864C4 /* MockMovieDetailViewController.swift in Sources */,
+				09DA303D2BA9AFBE006864C4 /* MockMovieSearchManager.swift in Sources */,
+				09DA30442BA9B430006864C4 /* MovieDetailPresenterTests.swift in Sources */,
+				09DA303A2BA9AD68006864C4 /* MovieListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +750,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47453KXQGG;
@@ -722,6 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mijisuh.MovieReviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieReview.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MovieReview";
@@ -734,6 +773,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47453KXQGG;
