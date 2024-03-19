@@ -8,5 +8,12 @@
 import Foundation
 
 struct MovieSearchRequestModel: Codable {
-    let query: String
+    let collection: String = "kmdb_new2"
+    let serviceKey: String
+    let title: String
+
+    enum CodingKeys: String, CodingKey {
+        case serviceKey = "ServiceKey"
+        case collection, title
+    }
 }

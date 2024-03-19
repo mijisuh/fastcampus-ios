@@ -29,10 +29,17 @@ final class MovieListViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.isHidden = true // SearchBar가 활성화되기 전에는 안보임
         tableView.delegate = presenter
         tableView.dataSource = presenter
         return tableView
     }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.viewWillAppear()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +48,7 @@ final class MovieListViewController: UIViewController {
     }
 }
 
-extension MovieListViewController: MovieListPresenterProtocol {
+extension MovieListViewController: MovieListProtocol {
     func setupNaviagtionBar() {
         navigationItem.title = "영화 평점"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -55,10 +62,31 @@ extension MovieListViewController: MovieListPresenterProtocol {
     }
     
     func setupViews() {
-        view.addSubview(collectionView)
+        [collectionView, tableView].forEach { view.addSubview($0) }
         
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    
+    func updateTableView(isHidden: Bool) {
+        tableView.isHidden = isHidden
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+    
+    func reloadCollectionView() {
+        collectionView.reloadData()
+    }
+    
+    func pushToMovieDetailViewController(with movie: Movie) {
+        let viewController = MovieDetailViewController(movie: movie)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

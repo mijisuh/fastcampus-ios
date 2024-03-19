@@ -14,42 +14,61 @@ final class MovieListCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .secondarySystemBackground
         return imageView
     }()
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        
+        label.font = .systemFont(ofSize: 14.0, weight: .semibold)
         return label
     }()
     
-    private lazy var ratingLabel: UILabel = {
+    private lazy var userRatingLabel: UILabel = {
         let label = UILabel()
-        
+        label.font = .systemFont(ofSize: 13.0, weight: .medium)
         return label
     }()
     
-    func setup(image: String, title: String, rating: String) {
-//        imageView.kf.setImage(with: image)
-        titleLabel.text = title
-        ratingLabel.text = rating
+    func update(_ movie: Movie) {
+        setupLayout()
+        setupView()
+        
+        imageView.kf.setImage(with: movie.imageURL)
+        titleLabel.text = movie.title
+        userRatingLabel.text = "⭐️ 5.0"
     }
 }
 
 private extension MovieListCollectionViewCell {
+    func setupView() {
+        layer.cornerRadius = 12.0
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.1
+        layer.shadowRadius = 8.0
+        
+        backgroundColor = .systemBackground
+    }
+    
     func setupLayout() {
-        [imageView, titleLabel, ratingLabel].forEach { addSubview($0) }
+        [imageView, titleLabel, userRatingLabel].forEach { addSubview($0) }
         
         imageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.leading.trailing.top.equalToSuperview().inset(16.0)
+            $0.height.equalTo(imageView.snp.width)
         }
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(imageView.snp.bottom)
+            $0.top.equalTo(imageView.snp.bottom).offset(8.0)
+            $0.leading.trailing.equalTo(imageView)
         }
         
-        ratingLabel.snp.makeConstraints {
-            $0.top.equalTo(ratingLabel.snp.bottom)
+        userRatingLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(8.0)
+            $0.leading.trailing.equalTo(imageView)
+            $0.bottom.equalToSuperview().inset(16.0)
         }
     }
 }

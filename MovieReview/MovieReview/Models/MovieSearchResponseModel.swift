@@ -8,5 +8,18 @@
 import Foundation
 
 struct MovieSearchResponseModel: Decodable {
-    var itmes: [Movie] = []
+    private let data: [Result]
+    var movies: [Movie] { data.first?.result ?? [] }
+
+    enum CodingKeys: String, CodingKey {
+        case data = "Data"
+    }
+}
+
+struct Result: Decodable {
+    var result: [Movie] = []
+
+    enum CodingKeys: String, CodingKey {
+        case result = "Result"
+    }
 }
