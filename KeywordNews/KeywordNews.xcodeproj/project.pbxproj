@@ -52,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		09DA30472BA9F664006864C4 /* KeywordNews.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = KeywordNews.xctestplan; path = "/Users/suhmzii/Desktop/study/패캠/iOS/KeywordNews/KeywordNews.xctestplan"; sourceTree = "<absolute>"; };
-		09DA30492BA9FD23006864C4 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		09DFD09F2BA83F4700121FAA /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		09DFD0A22BA842BA00121FAA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		09DFD0A42BA8432C00121FAA /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,15 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09DA30482BA9FCF9006864C4 /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				09DFD0AB2BA8613600121FAA /* Secrets.xcconfig */,
-				09DA30492BA9FD23006864C4 /* Dev.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
 		09DFD09E2BA83F3700121FAA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +167,7 @@
 			children = (
 				09DA30472BA9F664006864C4 /* KeywordNews.xctestplan */,
 				09DFD0A22BA842BA00121FAA /* .swiftlint.yml */,
-				09DA30482BA9FCF9006864C4 /* Configurations */,
+				09DFD0AB2BA8613600121FAA /* Secrets.xcconfig */,
 				09E9A1842BA839F300071F6D /* KeywordNews */,
 				09E9A19B2BA839F800071F6D /* KeywordNewsTests */,
 				09E9A1A52BA839F800071F6D /* KeywordNewsUITests */,
@@ -694,7 +684,7 @@
 		};
 		09E9A1AD2BA839F800071F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09DA30492BA9FD23006864C4 /* Dev.xcconfig */;
+			baseConfigurationReference = 9FF8EDB18447000CC0895CC2 /* Pods-KeywordNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
