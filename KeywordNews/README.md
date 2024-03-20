@@ -360,18 +360,18 @@
         - Xcode → About Xcode: 버전 확인
             
             <img width="1920" alt="13" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/53d1f7d8-6331-4b5f-8086-230d717dec97">
-            
-    - error: Unable to load contents of file list: ~ 빌드 에러 해결 방법
-        
-        [Xcode 10.2 Update issue Build system error -1: Unable to load contents of file list: input/output xcfilelist](https://stackoverflow.com/questions/55505991/xcode-10-2-update-issue-build-system-error-1-unable-to-load-contents-of-file-l/56966495#56966495)
         
     - .gitignore로 숨겨놓은 API Key를 Bitrise 파이프라인에서 사용하는 방법
-        - Bitrise ****Secrets에서 API Key 등록
+        - Bitrise Secrets에서 API Key 등록
     - 테스트 결과
         
         <img width="1093" alt="14" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/753b1558-1071-4203-9ed5-e5af9a1e2671">
         
         <img width="1249" alt="15" src="https://github.com/mijisuh/fastcampus-ios/assets/57468832/0dc96e52-ac2d-4eb9-8dbd-ca59969fe81e">
+    
+    - error: Unable to load contents of file list: ~ 빌드 에러 해결 방법
+        
+        [Xcode 10.2 Update issue Build system error -1: Unable to load contents of file list: input/output xcfilelist](https://stackoverflow.com/questions/55505991/xcode-10-2-update-issue-build-system-error-1-unable-to-load-contents-of-file-l/56966495#56966495)
 
     - xcconfig 설정 주의
         - Secrets.xcconfig를 생성해서 API Key 관리를 하기 때문에 .gitignore 설정으로 인해 해당 설정 파일을 Bitrise에서 인식하지 못해 빌드 실패
