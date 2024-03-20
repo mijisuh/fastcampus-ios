@@ -114,7 +114,7 @@ extension MovieListPresenter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "\(movieList[indexPath.row].title)"
+        cell.textLabel?.text = "\(movieList[indexPath.row].trimmedTitle)"
         return cell
     }
 }

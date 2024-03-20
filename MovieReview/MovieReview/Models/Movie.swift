@@ -8,7 +8,7 @@
 import Foundation
 
 struct Movie: Codable {
-    let title: String
+    private let title: String
     private let posters: String
     private let actors: [String: [Actor]]
     private let directors: [String: [Director]]
@@ -16,12 +16,18 @@ struct Movie: Codable {
     
     var isLiked: Bool = false // 파싱 에러를 발생시키므로 추가적인 처리 필요
 
+    var trimmedTitle: String {
+        title
+        .replacingOccurrences(of: "!HS", with: "")
+        .replacingOccurrences(of: "!HE", with: "")
+        .trimmingCharacters(in: [" "]) // 앞뒤 문자 제거
+    }
     var imageURL: URL? { URL(string: posters.components(separatedBy: "|").first ?? "") }
     var actorNames: [String] { actors.first?.value.compactMap { $0.name } ?? [] }
     var directorNames: [String] { directors.first?.value.compactMap { $0.name } ?? [] }
     
     enum CodingKeys: String, CodingKey {
-        case title, posters, actors, directors, repRatDate, isLiked // 서버에서 가져올 값들
+        case title, posters, actors, directors, repRatDate, isLiked
     }
     
     init(from decoder: Decoder) throws {

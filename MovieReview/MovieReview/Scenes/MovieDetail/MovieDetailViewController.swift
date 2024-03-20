@@ -55,7 +55,7 @@ extension MovieDetailViewController: MovieDetailProtocol {
     func setupViews(with movie: Movie) {
         view.backgroundColor = .systemBackground
         
-        navigationItem.title = movie.title
+        navigationItem.title = movie.trimmedTitle
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.rightBarButtonItem = rightBarButtonItem

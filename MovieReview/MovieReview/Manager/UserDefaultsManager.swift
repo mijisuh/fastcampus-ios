@@ -33,7 +33,7 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
     
     func removeMovie(_ movie: Movie) {
         var movies = getMovies()
-        movies = movies.filter { $0.title != movie.title}
+        movies = movies.filter { $0.trimmedTitle != movie.trimmedTitle}
         saveMovie(movies)
     }
     

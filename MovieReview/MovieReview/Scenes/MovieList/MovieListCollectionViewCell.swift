@@ -37,7 +37,7 @@ final class MovieListCollectionViewCell: UICollectionViewCell {
         setupView()
         
         imageView.kf.setImage(with: movie.imageURL)
-        titleLabel.text = movie.title
+        titleLabel.text = movie.trimmedTitle
         userRatingLabel.text = "⭐️ 5.0"
     }
 }
