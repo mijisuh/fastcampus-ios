@@ -43,3 +43,5 @@
 | [별다방 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Cafe) | SwiftUI | TabView, LazyHStack, List, NavigationView, Combine |
 | [번역기 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Translate) | UIKit, SnapKit | Localization, Google Cloud Translation API |
 | [도서 리뷰 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/BookReview) | UIKit, SnapKit | MVP, XCTest, Naver API |
+| [영화 정보 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/MovieReview) | UIKit, SnapKit | MVP, XCTest, UI Test, BDD, SwiftLint, Alamofire |
+| [뉴스 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/KeywordNews) | UIKit, SnapKit | MVP, XCTest, Unit Test, UI Test, WKWebView, Bitrise, CI/CD, Alamofire |
