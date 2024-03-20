@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "CCE7532D-D586-4508-93BE-EA0D5994EB33",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Tweet.xcodeproj",
+      "identifier" : "09DA30522BAA76D0006864C4",
+      "name" : "Tweet"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Tweet.xcodeproj",
+        "identifier" : "09DA30682BAA76D4006864C4",
+        "name" : "TweetTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Tweet.xcodeproj",
+        "identifier" : "09DA30722BAA76D4006864C4",
+        "name" : "TweetUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

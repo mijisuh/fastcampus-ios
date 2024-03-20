@@ -45,3 +45,4 @@
 | [도서 리뷰 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/BookReview) | UIKit, SnapKit | MVP, XCTest, Naver API |
 | [영화 정보 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/MovieReview) | UIKit, SnapKit | MVP, XCTest, UI Test, BDD, SwiftLint, Alamofire |
 | [뉴스 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/KeywordNews) | UIKit, SnapKit | MVP, XCTest, Unit Test, UI Test, WKWebView, Bitrise, CI/CD, Alamofire |
+| [트위터 앱](https://github.com/mijisuh/fastcampus-ios/tree/main/Tweet) | UIKit, SnapKit | MVP, XCTest, Unit Test, UserDefaults |
